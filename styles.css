@@ -56,11 +56,13 @@ section{
 .title-main{
     text-align: center;
     font-size: var(--fontSizeLarge);
+    font-family: var(--navMenu);
 }
 .content-main{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--navMenu);
 }
 
 .Specs-main{
