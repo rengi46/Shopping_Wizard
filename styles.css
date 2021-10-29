@@ -46,9 +46,30 @@ section{
 
 
 }
-.div-main{
-background-color: white;
+.title-main{
+    text-align: center;
+    font-size: var(--fontSizeLarge);
 }
+.content-main{
+    display: flex;
+}
+.c-promax-main{
+    border: solid 1px ;
+    padding: 1% 4%;
+}
+.promax-main{
+
+}
+.IPhon13-main{
+
+}
+.c-13-main{
+    border: solid 1px ;
+    padding: 1% 4%;
+}
+
+
+
 footer {
 
     background-color:var(--navbar);
