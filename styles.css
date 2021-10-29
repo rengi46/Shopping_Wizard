@@ -7,7 +7,7 @@ BODY
 
 * {
     font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "SF Pro Text";
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 :root{
     --fondoP:rgba(251,251,253,255);
