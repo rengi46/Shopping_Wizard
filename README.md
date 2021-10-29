@@ -1,16 +1,16 @@
 # Shopping Wizard Project
 
 ## iPhone 13 - Apple Online Store Inspired
-===============================================================
+
 This project was developed based on peer coding using HTML, CSS and JS only.
 
 ## Prerequisites
 
-* ### Phase 1: Product
+### Phase 1: Product
     * This is the first content that you will see in HTML
     * The app will have image miniatures that by hovering over them you will see the image in a bigger size in the main product image region.
     * Here you must create two options that depending on the user choice the price and the images will change. These options can be a color or product size such as XS, S, M, L, XL t-shirt sizes.
-* ### Phase 2: Step 1 - Profile
+### Phase 2: Step 1 - Profile
     * Username
         * Set the specific input type for text
             * Text without spaces
@@ -83,7 +83,7 @@ This project was developed based on peer coding using HTML, CSS and JS only.
         * Max: 9 digits
     * This is my regular address
         * Input type checkbox
-* ### Phase 4: Step 3 - Shipping
+### Phase 4: Step 3 - Shipping
     * Shipping types (required)
         * Radio button
         * Required
@@ -108,7 +108,7 @@ This project was developed based on peer coding using HTML, CSS and JS only.
             * Input title
             * Input message (textarea [max 200])
             * Input file (accept="image/png, image/jpeg")
-* ### Phase 5: Step 4 - Finish
+### Phase 5: Step 4 - Finish
     * Terms and conditions (checkbox)
         * Required
         * The finish button will remain disabled until you select the checkbox
@@ -117,7 +117,7 @@ This project was developed based on peer coding using HTML, CSS and JS only.
     * Final price
     * The time it took the user to finish the registration since the first part (step 1)
 
-* ## 3.1 Form requirements
+## 3.1 Form requirements
 Below are the general requirements that the form should have:
 Each step page will contain a “next” and a “clear form” button.
 The “next” button will link to the next step.
@@ -132,12 +132,12 @@ For every minute that the user remains in the purchase process (step 1, step2, s
 The purchase process will have a time limit of 5 minutes (start in step 1), if it is not completed in this period of time (the process is completed by reaching the thank you page), a message should appear on the screen indicating that the maximum time allowed for the purchase process has been exceeded and will automatically redirect you to the product screen in 5 seconds (the first screen)
 When you reach the Thank You page you will show all the values that are specified in the documentation (shipping, purchase time, ...) and then you will have to reset all the information that you have stored in this process (time, price, …)
 
-*##  4. Requirements
+##  4. Requirements
 You will have to implement the entire application using a single HTML file
 All the processes must be carried out without reloading the page
 You cannot use cookies, localStorage or any similar technologies
 You cannot use third-party libraries
-* ## 5.Extras 💯
+## 5.Extras 💯
 Once you have implemented the main features of the application you should implement the following extra requirements (that are not specified in any particular order) as a challenge for yourself and your team. However, you can also consider them during the development of the pill if you would like to implement any of them from the beginning, such as the design requirements or the browser compatibility.
 It is easier to develop a feature from the beginning than to modify it later.
 5.1 Browser compatibility
@@ -154,25 +154,25 @@ All the screens and steps should be responsive using flexbox so that they can be
 5.6 Accessibility
 You should use semantic HTML elements for all the app such as buttons and HTML5 sectioning elements (main, section, nav, etc)
 
-* ## 6. Deliverables
+## 6. Deliverables
 To evaluate the project you will need the following deliverables:
-* ### Project repository with:
+### Project repository with:
 
 A presentation in Google Slides explaining:
 Explain what lessons you’ve learned during this project
 What problems have you encountered when developing this project?
 Explain how you changed roles to develop the project for each phase (screen)
 
-* # Slides Presentation*
+### Slides Presentation
 
 https://docs.google.com/presentation/d/1ZsrKVSBMETXyZRwO5owZtb2vxtgK7wmowArxwOFDDNI/edit?usp=sharing
 
-* ### Built With
+### Built With
 
 - [Visual Code Studio](https://code.visualstudio.com/)
 
 
-* # Authors
+# Authors
 
 - **Marcel Durgante**
 - **Garikoitz Herrero**
@@ -182,6 +182,6 @@ https://docs.google.com/presentation/d/1ZsrKVSBMETXyZRwO5owZtb2vxtgK7wmowArxwOFD
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-* ## Acknowledgments
+## Acknowledgments
 
 - Assembler School of Software Engineering / Barcelona / October's Promotion 2021
