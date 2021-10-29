@@ -12,6 +12,7 @@ IPhon13_main.addEventListener("mouseout",visible13)
 
 function visiblemax(){
     Specsmax_main.classList.toggle("visible")
+    IPhon13_main.style.left = "200px"
 }
 function visible13(){
     Specs13_main.classList.toggle("visible")
