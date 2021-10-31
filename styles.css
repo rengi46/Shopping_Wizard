@@ -7,7 +7,7 @@ BODY
 
 * {
     font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "SF Pro Text";
-    /* overflow: hidden; */
+    /* overflow: hidden;  */
 }
 :root{
     --fondoP:rgba(251,251,253,255);
@@ -42,8 +42,8 @@ nav {
 
 }
 section{
-    height: 100vh;
-    width:100%;
+    height: 1vh;
+    width:100vh;
     background-color:var(--fondoS);
 
 
@@ -51,6 +51,82 @@ section{
 .div-main{
 background-color: white;
 }
+
+
+.finishing{
+    width: 70%;
+    text-align: right;
+    margin: auto;
+
+}
+.title-finishing{
+    text-align: center;
+    
+}
+.content-finishing{
+
+}
+.compra-finishing{
+    height: 120px;
+    padding: 2%;
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.compra-finishing>img{
+    width:15% ;
+}
+.compra-finishing>div{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    align-content: flex-start;
+}
+.compra-finishing>i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.pay-finishing{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
 
     background-color:var(--navbar);
