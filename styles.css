@@ -101,7 +101,7 @@ section{
     transition: transform 0.5s;
 }
 .promax-main:hover{
-    transform: scale(1.25);
+    transform: scale(1.2);
     border: solid 2px #158df0;
     box-shadow: 0px 0px 5px;
 }
@@ -131,7 +131,7 @@ section{
 .IPhon13-main:hover{
     box-shadow: 0px 0px 5px;
     border: solid 2px #158df0;
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 .IPhon13-main:active{
     transform: scale(5);
