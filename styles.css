@@ -81,7 +81,11 @@ footer {
   white-space: nowrap;
   text-decoration: none;
 }
-
-section {
-  color: var(--fondoS);
+.case1-main-image {
+  height: 400px;
+  width: 400px;
+}
+.case1-color-button {
+  height: 25px;
+  width: 25px;
 }
