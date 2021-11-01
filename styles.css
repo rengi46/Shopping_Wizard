@@ -84,6 +84,16 @@ footer {
 .case1-main-image {
   height: 400px;
   width: 400px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+.case1-side-image {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
 }
 .case1-color-button {
   height: 25px;
