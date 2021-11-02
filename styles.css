@@ -183,10 +183,11 @@ section {
     align-items: center;
 }
 .shipping>h1{
+    padding: 2%;
     padding-bottom: 3%;
 }
 .shipping>p{
-    width: 25%;
+    width: 30%;
     padding: 0.5%;
 }
 .shipping>p>input{
@@ -196,7 +197,7 @@ section {
     padding: 2%;
 }
 .chekgift-shipping{
-    padding: 1%;
+    padding: 4%;
 }
 .chekgift-shipping>input{
     padding: 0% 1%;
@@ -209,6 +210,12 @@ section {
 .gift-shipping>div{
     text-align: center;
     margin: 1%;
+    border: black 1px solid;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.gift-shipping>div>p{
+  padding: 30px;
 }
 
 
