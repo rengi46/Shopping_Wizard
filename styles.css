@@ -89,9 +89,28 @@ background-color: white;
     font-size: 25px;
     cursor: pointer;
 }
-.pay-finishing{
-    
+
+.pay-finishing>p>strong{
+    position: relative;
+    right: 150px;
 }
+.pay-finishing>h3>strong{
+    position: relative;
+    right: 150px;
+}
+.pay-finishing>p>span{
+   position: absolute;
+   right:15%
+}
+.pay-finishing>h3>span{
+    position: absolute;
+    right:15%
+ }
+ .btn-pay{
+    margin:0% 45%;
+    width: 15%;
+
+ }
 
 
 
