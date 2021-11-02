@@ -162,6 +162,54 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+.advance{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    border-bottom: black 1px solid;
+    margin: 2% 10%;
+    width: 1600px;
+}
+.advance>p{padding: 1%;}
+
+
+.progres-nav{
+    border-bottom: #158df0 3px solid;
+}
+.shipping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shipping>h1{
+    padding-bottom: 3%;
+}
+.shipping>p{
+    width: 25%;
+    padding: 0.5%;
+}
+.shipping>p>input{
+    margin: 0% 7%;
+}
+.shipping>i{
+    padding: 2%;
+}
+.chekgift-shipping{
+    padding: 1%;
+}
+.chekgift-shipping>input{
+    padding: 0% 1%;
+}
+.gift-shipping{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.gift-shipping>div{
+    text-align: center;
+    margin: 1%;
+}
 
 
 footer {
