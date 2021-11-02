@@ -1,7 +1,3 @@
-var ing =[["/src/assets/img/iphone13-blue.png","IPhone13","blue","512G","48h","1259"],
-["/src/assets/img/iphone13-pink-cover.png","IPhone13 cover","Pink","","48h","59"]];
-
-
 var shoping =[["/src/assets/img/iphone13-blue.png","IPhone13","blue","512G","48h","1259"],
 ["/src/assets/img/iphone13-pink-cover.png","IPhone13 cover","Pink","","48h","59"]];
 const dad = document.getElementById("content-finishing");
@@ -60,6 +56,21 @@ subtotal.innerText=subtot+"€"
 envio.innerText= env+"€"
 total.innerText= subtot + env +"€"
 
+var check = document.getElementById("checkbox-finishing")
+var btn_pay = document.getElementById("btn-finishing")
+
+check.addEventListener("click",abtn)
+function abtn(){
+if (check.checked==true){
+    btn_pay.disabled=false
+    btn_pay.classList.toggle("btn-apple")
+    
+}
+else if (check.checked==false){
+    btn_pay.disabled=true
+    btn_pay.classList.toggle("btn-apple")
+}
+}
 
 
 

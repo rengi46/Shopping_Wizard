@@ -106,10 +106,16 @@ background-color: white;
     position: absolute;
     right:15%
  }
- .btn-pay{
-    margin:0% 45%;
-    width: 15%;
+ .terminos-finishing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
 
+ .btn-pay{
+    width: 15%;
+    margin: 3% 45%;
  }
 
 
