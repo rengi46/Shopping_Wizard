@@ -1,89 +1,96 @@
-/*Fonts
-HEADINGS
-"
-BODY
-"*/
-
-
 * {
-    font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "SF Pro Text";
-    overflow: hidden;
-}
-:root{
-    --fondoP:rgba(251,251,253,255);
-    --navbar:rgba(48,48,48,255);
-    --characters:rgba(214,214,214,255);
-    --fondoS:#f7f6f3;
-    --navMenu: "Arial";
-    --fontSizeSmall: 0,7em;
-    --fontSizeMedium: 1em;
-    --fontSizeLarge: 1.5em;
-
+  /*   overflow: hidden;
+ */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: -1px;
-    background-color:var(--navbar);
+html {
+  /* 62.5% of 16px base font size is 10px */
+  font-size: 62.5%;
 }
 
-.header{
-    color:var(--characters);
-    font-size: 0.7em;
-    font-family: var(--navMenu);
-    display:flex;
-    justify-content:space-around ;
-    list-style-type:none;
-    padding:10px;
-    margin-left:15%;
-    margin-right:15%;
-
-
+body {
+  font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
+  /*  background-color: var(--mainWhite);
+  color: var(--mainBlack); */
 }
-section{
-    height: 100vh;
-    width:100%;
-    background-color:var(--fondoS);
-
-
+:root {
+  --fondoP: rgba(251, 251, 253, 255);
+  --navbar: rgba(48, 48, 48, 255);
+  --characters: rgba(214, 214, 214, 255);
+  --fondoS: #f7f6f3;
+  --navMenu: "Arial";
+  --fontSizeSmall: 0, 7em;
+  --fontSizeMedium: 1em;
+  --fontSizeLarge: 1.5em;
 }
-.div-main{
-background-color: white;
+
+.navbar {
+  height: 6rem;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: var(--navbar);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-items {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  color: var(--characters);
+  list-style-type: none;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--fondoS);
+}
+.div-main {
+  background-color: white;
 }
 footer {
-
-    background-color:var(--navbar);
+  background-color: var(--navbar);
 }
 
 .footer > ul {
-    color:var(--characters);
-    font-size: 0.7em;
-    font-family: var(--navMenu);
-    display:flex;
-    justify-content:space-around ;
-    list-style-type:none;
-    padding:10px;
-    margin-left:15%;
-    margin-right:15%;
+  color: var(--characters);
+  font-size: 0.7em;
+  font-family: var(--navMenu);
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
-.btn-apple{
-    font-size: 17px;
-    line-height: 1.47059;
-    font-weight: 400;
-    letter-spacing: -.022em;
-    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-    background-color: #0070c9;
-    background: linear-gradient(#42a1ec,#0070c9);
-    border: 1px solid #07c;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    min-width: 30px;
-    padding: 4px 15px;
-    text-align: center;
-    white-space: nowrap;
-    text-decoration: none;
+.btn-apple {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  background-color: #0070c9;
+  background: linear-gradient(#42a1ec, #0070c9);
+  border: 1px solid #07c;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 30px;
+  padding: 4px 15px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
 }
