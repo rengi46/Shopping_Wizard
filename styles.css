@@ -1,13 +1,9 @@
-/*Fonts
-HEADINGS
-"
-BODY
-"*/
-
 * {
-  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
-    Helvetica, Arial, sans-serif, "SF Pro Text";
-  /* overflow: hidden; */
+  /*   overflow: hidden;
+ */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
   --fondoP: rgba(251, 251, 253, 255);
@@ -19,6 +15,42 @@ BODY
   --fontSizeMedium: 1em;
   --fontSizeLarge: 1.5em;
 }
+
+html {
+  /* 62.5% of 16px base font size is 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
+  /*  background-color: var(--mainWhite);
+  color: var(--mainBlack); */
+}
+
+
+.navbar {
+  height: 6rem;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: var(--navbar);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-items {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  color: var(--characters);
+  list-style-type: none;
+}
+
 
 nav {
   position: -webkit-sticky;
@@ -43,6 +75,8 @@ section {
   width: 100%;
   background-color: var(--fondoP);
 }
+
+
 
 .title-main {
   text-align: center;
@@ -127,6 +161,7 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+
 
 footer {
   background-color: var(--navbar);
