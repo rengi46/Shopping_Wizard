@@ -94,3 +94,54 @@ function showTime(a){
     minutes = a.getMinutes();
     return (year+"-"+month+"-"+Day+" "+hours+":"+minutes);
 }
+
+//                 address
+var inputs=document.querySelectorAll(".address>p>input")
+var inp=document.querySelector(".address>div")
+var regular = document.getElementById("Regular-address")
+var btn_address = document.getElementById("next-address")
+var btn_Next = document.getElementById("next-address-a")
+
+
+
+btn_address.addEventListener("click",next)
+regular.addEventListener("click",function(){inp.classList.toggle("visible")})
+for(var i =0;i<inputs.length;i++){
+    inputs[i].addEventListener("mouseup",comprovaciones)
+    inputs[i].addEventListener("keyup",comprovaciones) 
+}
+
+function comprovaciones(event){
+    var cont_input=event.srcElement.value;
+    if(cont_input.length>1){
+        event.srcElement.style.color="#008000";
+        event.srcElement.style.backgroundColor="#ffffff";
+    }
+    else{
+        event.srcElement.style.backgroundColor="#ff0000";
+    }
+ 
+}
+
+function next(){
+    var a =0
+    for (const input of inputs) {
+        if(input.value.length>1){
+            input.style.color="#008000";
+            input.style.backgroundColor="#ffffff";
+            a++
+            console.log(a)
+        }
+        else{
+            input.style.backgroundColor="#ff0000";
+        }
+        if(input.style.backgroundColor=="#ffffff"){
+            a++
+            console.log(a)
+        }
+    }
+    if(a==6){
+        btn_Next.href="#shipping"
+    }
+
+}

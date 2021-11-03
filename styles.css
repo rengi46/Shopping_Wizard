@@ -36,6 +36,7 @@ body {
   position: sticky;
   top: 0px;
   z-index: 1;
+  background-color: red;
   background-color: var(--navbar);
   display: flex;
   align-items: center;
@@ -60,6 +61,8 @@ section {
   /* overflow-y: auto; */
 }
 
+
+/*-----------main-----------------*/
 .title-main {
   padding: 2%;
   text-align: center;
@@ -146,6 +149,7 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+/*-----------end main-----------------*/
 .advance{
     display: flex;
     justify-content: space-between;
@@ -158,6 +162,21 @@ section {
 .progres-nav{
     border-bottom: #158df0 3px solid;
 }
+/* --------------address -----------------*/
+.address{
+  text-align: center;
+}
+.address>p{
+  padding: 15px;
+}
+.address>div{
+  position: absolute;
+  right: 20%;
+  padding: 10px;
+  visibility: hidden;
+}
+
+/* --------------end address -----------------*/
 /* --------------shiping -----------------*/
 .shipping{
     display: flex;
@@ -215,7 +234,7 @@ section {
   bottom: 80px;
   left: 700px;
 }
-/* --------------shiping -----------------*/
+/* --------------end shiping -----------------*/
 /* ------------ iPhone 1 ----------------*/
 
 .main-container-iphone1 {
@@ -347,10 +366,10 @@ section {
     width: 15%;
     margin: 3% 45%;
 }
-/* --------------finishing --------------------*/
+/* --------------end finishing --------------------*/
 
 
-
+/* ----------- iPhone 13 ----------------*/
 .opt-border-iphone1 {
   margin: 3rem;
   border: 0.1rem solid var(--blueiPhone1);
