@@ -42,7 +42,7 @@ nav {
 
 }
 section{
-    height: 1vh;
+    height: 100vh;
     width:100vh;
     background-color:var(--fondoS);
 
