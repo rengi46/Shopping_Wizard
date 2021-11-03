@@ -15,6 +15,7 @@
   --fontSizeMedium: 1em;
   --fontSizeLarge: 1.5em;
   --blueiPhone1: rgb(17, 124, 210);
+  --appleFontColor: #1d1d1f;
 }
 
 html {
@@ -24,8 +25,8 @@ html {
 
 body {
   font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
-  /*  background-color: var(--mainWhite);
-  color: var(--mainBlack); */
+  color: var(--appleFontColor);
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar {
@@ -142,7 +143,7 @@ section {
   box-shadow: 0px 0px 10px #158df0;
 }
 
-/* ------------ iPhone 1 ----------------*/
+/* ---------iPhone 13 (marcel) ----------*/
 
 .main-container-iphone1 {
   display: flex;
@@ -152,6 +153,8 @@ section {
   align-items: center;
   justify-content: space-evenly;
 }
+        /* --- aside left 1 --- */
+
 
 .aside-iphone1 {
   display: grid;
@@ -164,18 +167,21 @@ section {
   width: auto;
 }
 
+        /* ---  center 1 --- */
+
+
 .display-center-iphone1 {
   display: grid;
 }
 
 .display-main-iphone1 {
-  height:100rem;
+  height:80rem;
   width: auto;
 }
 
 .pick-color-iphone1 {
   text-transform: capitalize;
-  margin-left: 20rem;
+  margin-left: 15rem;
   font-size: 3rem;
 }
 .opt-colors-iphone1 {
@@ -185,18 +191,21 @@ section {
   margin-top: 3rem;
 }
 .item1-cont-iphone1 {
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 5;
+
 }
 .item2-cont-iphone1 {
-  grid-column-start: 8;
-  grid-column-end: 9;
+  grid-column-start: 7;
+  grid-column-end: 8;
 }
 
-.opt-border-iphone1 {
-  margin: 3rem;
-  border: 0.1rem solid var(--blueiPhone1);
+.circle-blue-iphone1, .circle-pink-iphone1{
+  height: auto;
+  width:auto;
 }
+
+/* --- aside right 1 --- */
 
 .aside-info-iphone1 {
   min-height: calc(100vh - 6rem);
@@ -208,10 +217,107 @@ section {
   width: 50rem;
   justify-self: center;
   align-self: center;
-
 }
 
-/* ------------ end of  iPhone 1 ----------------*/
+.aside-title-iphone1 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.aside-description-iphone1 {
+  font-size: 1.7rem;
+ margin: 2rem 0;
+}
+
+.horizontal-rule {
+  margin: 2rem 0;
+}
+.capacity-text-iphone1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+.capacity-subtext-iphone1 {
+  color: var(--blueiPhone1);
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.capacity-grid-iphone1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.gb-grid-item {
+  border: 1px solid grey;
+padding: 1.5rem 0;
+border-radius: 10px;
+font-size: small;
+line-height: 1.5rem;
+}
+
+.capacity-gb-text {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.gb-description {
+  color: rgb(120, 120, 120);
+}
+
+.subtotal-iphone1 {
+  margin: 2rem 0;
+}
+.subprice-iphone1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.txt-payment {
+  font-size: 1.6rem;
+  padding: 0.3rem 0;
+}
+
+.txt-one-time {
+  margin-top: 1rem;
+}
+
+.txt-blue {
+  color: var(--blueiPhone1)
+}
+
+.continue-btn-iphone1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa-heart {
+  color: var(--blueiPhone1)
+}
+
+/* ----------- end of  iPhone 13 ----------------*/
+
+/* ---------iPhone 13 Pro (marcel) ----------*/
+
+/* --- aside left 2 --- */
+
+.circle-graffiti-iphone1 {
+height: 6.5rem;
+width: auto;
+}
+
+/* --- aside right 2 --- */
+
+
+/* ---------End Of iPhone 13 Pro (marcel) ----------*/
+
 
 footer {
   background-color: var(--navbar);
