@@ -106,7 +106,7 @@ section {
   padding: 5px;
 }
 .visible {
-  visibility: visible;
+  visibility: visible!important;
 }
 
 .img-main {
@@ -192,12 +192,17 @@ section {
 }
 .shipping>p>input{
     margin: 0% 7%;
+    border-radius: 50px;
 }
 .shipping>i{
     padding: 2%;
 }
+.shipping>h3{
+  padding: 2%;
+  visibility: hidden;
+}
 .chekgift-shipping{
-    padding: 4%;
+    padding: 2%;
 }
 .chekgift-shipping>input{
     padding: 0% 1%;
@@ -210,6 +215,7 @@ section {
 .gift-shipping>div{
     text-align: center;
     margin: 1%;
+    padding: 1%;
     border: black 1px solid;
     border-radius: 5px;
     visibility: hidden;
@@ -217,7 +223,15 @@ section {
 .gift-shipping>div>p{
   padding: 30px;
 }
-
+.Text-shipping{
+  width: 20em;
+  height: 10em;
+}
+#button-shipping{
+  position: relative;
+  bottom: 80px;
+  left: 700px;
+}
 
 footer {
   background-color: var(--navbar);
