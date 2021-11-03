@@ -29,3 +29,68 @@ function remAdd(){
     IPhon13_main.removeEventListener("click",remAdd)
     console.log("patata")
 }
+
+
+
+//                                 shipping
+var checks=document.querySelectorAll(".shipping>p>input")
+var gift=document.querySelector(".chekgift-shipping>input")
+var giftText=document.querySelectorAll(".gift-shipping>div")
+var Tenvio=document.querySelector(".shipping>h3")
+var dataEnvio=document.getElementById("dataEnvio-shipping")
+var btn_shipping=document.getElementById("button-shipping")
+
+
+gift.addEventListener("click",isGift)
+checks[0].addEventListener("click",shipping)
+checks[1].addEventListener("click",shipping)
+checks[2].addEventListener("click",shipping)
+
+function isGift(){
+    giftText[0].classList.toggle("visible")
+    giftText[1].classList.toggle("visible")
+}
+
+function shipping(event){
+    var d= new Date();
+    switch(event.srcElement.classList[0]){
+        case"i1":
+        checks[1].checked=false
+        checks[2].checked=false
+        d.setUTCMilliseconds(86400000);
+        break
+        case"i2":
+        checks[0].checked=false
+        checks[2].checked=false
+        d.setUTCMilliseconds(172800000);
+        break
+        case"i3":
+        checks[1].checked=false
+        checks[0].checked=false
+        d.setUTCMilliseconds(259200000);
+        break
+    }
+    var md = d
+    dataEnvio.innerHTML=showTime(d) +" hasta el ";
+    md.setUTCMilliseconds(86400000)
+    dataEnvio.innerHTML=dataEnvio.innerHTML+showTime(md)
+    if(checks[0].checked==true||checks[1].checked==true||checks[2].checked==true){
+        Tenvio.classList= "visible"
+        btn_shipping.disabled =false
+        btn_shipping.className="btn-apple"
+    }
+    else{
+        Tenvio.classList= ""
+        btn_shipping.disabled =true
+        btn_shipping.className=""
+    }
+}
+
+function showTime(a){
+    year = a.getFullYear();
+    month = a.getMonth();
+    Day = a.getDate();
+    hours = a.getHours();
+    minutes = a.getMinutes();
+    return (year+"-"+month+"-"+Day+" "+hours+":"+minutes);
+}

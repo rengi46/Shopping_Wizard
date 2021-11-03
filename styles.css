@@ -86,7 +86,7 @@ section {
   padding: 5px;
 }
 .visible {
-  visibility: visible;
+  visibility: visible!important;
 }
 
 .img-main {
@@ -142,8 +142,78 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+.advance{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    border-bottom: black 1px solid;
+    margin: 2% 10%;
+    width: 1600px;
+}
+.advance>p{padding: 1%;}
 
-/* ---------iPhone 13 (marcel) ----------*/
+.progres-nav{
+    border-bottom: #158df0 3px solid;
+}
+/* --------------shiping -----------------*/
+.shipping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shipping>h1{
+    padding: 2%;
+    padding-bottom: 3%;
+}
+.shipping>p{
+    width: 30%;
+    padding: 0.5%;
+}
+.shipping>p>input{
+    margin: 0% 7%;
+    border-radius: 50px;
+}
+.shipping>i{
+    padding: 2%;
+}
+.shipping>h3{
+  padding: 2%;
+  visibility: hidden;
+}
+.chekgift-shipping{
+    padding: 2%;
+}
+.chekgift-shipping>input{
+    padding: 0% 1%;
+}
+.gift-shipping{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.gift-shipping>div{
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    border: black 1px solid;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.gift-shipping>div>p{
+  padding: 30px;
+}
+.Text-shipping{
+  width: 20em;
+  height: 10em;
+}
+#button-shipping{
+  position: relative;
+  bottom: 80px;
+  left: 700px;
+}
+/* --------------shiping -----------------*/
+/* ------------ iPhone 1 ----------------*/
 
 .main-container-iphone1 {
   display: flex;
@@ -203,6 +273,76 @@ section {
 .circle-blue-iphone1, .circle-pink-iphone1{
   height: auto;
   width:auto;
+}
+
+/* --------------finishing --------------------*/
+.finishing{
+    width: 70%;
+    text-align: right;
+    margin: auto;
+}
+.title-finishing{
+    text-align: center;
+}
+.content-finishing{
+  overflow-y: scroll;
+}
+.compra-finishing{
+    height: 120px;
+    padding: 2%;
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.compra-finishing>img{
+    width:10% ;
+}
+.compra-finishing>div{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    align-content: flex-start;
+}
+.compra-finishing>i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.pay-finishing>p>strong{
+    position: relative;
+    right: 150px;
+}
+.pay-finishing>h3>strong{
+    position: relative;
+    right: 150px;
+}
+.pay-finishing>p>span{
+    position: absolute;
+    right:15%
+}
+.pay-finishing>h3>span{
+    position: absolute;
+    right:15%
+}
+.terminos-finishing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn-pay{
+    width: 15%;
+    margin: 3% 45%;
+}
+/* --------------finishing --------------------*/
+
+
+
+.opt-border-iphone1 {
+  margin: 3rem;
+  border: 0.1rem solid var(--blueiPhone1);
 }
 
 /* --- aside right 1 --- */
