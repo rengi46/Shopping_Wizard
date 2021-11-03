@@ -7,7 +7,7 @@ BODY
 
 * {
     font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "SF Pro Text";
-    /* overflow: hidden;  */
+     /* overflow: hidden;   */
 }
 :root{
     --fondoP:rgba(251,251,253,255);
@@ -53,31 +53,30 @@ background-color: white;
 }
 
 
+/* --------------finishing --------------------*/
 .finishing{
     width: 70%;
     text-align: right;
     margin: auto;
-
 }
 .title-finishing{
     text-align: center;
-    
 }
 .content-finishing{
-
+  overflow-y: scroll;
 }
 .compra-finishing{
     height: 120px;
     padding: 2%;
     border: solid 1px gray;
     border-radius: 10px;
-    margin: 5%;
+    margin: 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .compra-finishing>img{
-    width:15% ;
+    width:10% ;
 }
 .compra-finishing>div{
     display: flex;
@@ -89,7 +88,6 @@ background-color: white;
     font-size: 25px;
     cursor: pointer;
 }
-
 .pay-finishing>p>strong{
     position: relative;
     right: 150px;
@@ -99,25 +97,24 @@ background-color: white;
     right: 150px;
 }
 .pay-finishing>p>span{
-   position: absolute;
-   right:15%
+    position: absolute;
+    right:15%
 }
 .pay-finishing>h3>span{
     position: absolute;
     right:15%
- }
- .terminos-finishing{
+}
+.terminos-finishing{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
- }
-
- .btn-pay{
+}
+.btn-pay{
     width: 15%;
     margin: 3% 45%;
- }
-
+}
+/* --------------finishing --------------------*/
 
 
 
