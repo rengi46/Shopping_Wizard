@@ -1,6 +1,7 @@
+
 * {
-  /*   overflow: hidden;
- */
+     /* overflow: hidden;  */
+ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -56,6 +57,7 @@ section {
   height: 100vh;
   width: 100%;
   background-color: var(--fondoP);
+  /* overflow-y: auto; */
 }
 
 .title-main {
@@ -69,6 +71,8 @@ section {
   align-items: center;
   justify-content: center;
   font-family: var(--navMenu);
+  margin: 1.5%;
+  height: 700px;
 }
 
 .Specs-main {
@@ -144,14 +148,13 @@ section {
 }
 .advance{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
     border-bottom: black 1px solid;
-    margin: 2% 10%;
-    width: 1600px;
+    margin: 2% auto ;
+    width: 70%;
 }
 .advance>p{padding: 1%;}
-
 .progres-nav{
     border-bottom: #158df0 3px solid;
 }
@@ -277,7 +280,7 @@ section {
 
 /* --------------finishing --------------------*/
 .finishing{
-    width: 70%;
+  width: 70%;
     text-align: right;
     margin: auto;
 }
@@ -310,18 +313,26 @@ section {
     font-size: 25px;
     cursor: pointer;
 }
+.pay-finishing>p{
+  padding:6px;
+}
 .pay-finishing>p>strong{
     position: relative;
     right: 150px;
+    padding:10px;
+}
+.pay-finishing>p>span{
+  position: absolute;
+  right:15%
+}
+.pay-finishing>h3{
+  padding:10px;
 }
 .pay-finishing>h3>strong{
     position: relative;
     right: 150px;
 }
-.pay-finishing>p>span{
-    position: absolute;
-    right:15%
-}
+
 .pay-finishing>h3>span{
     position: absolute;
     right:15%
