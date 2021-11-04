@@ -456,5 +456,5 @@ input submit {
 }
 
 .red-input-hidden {
-    visibility: hidden;
+    visibility: hidden!important;
 }

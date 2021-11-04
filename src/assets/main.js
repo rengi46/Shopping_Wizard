@@ -250,7 +250,7 @@ function comprovaciones(event) {
         event.srcElement.style.color = "#008000";
         event.srcElement.style.backgroundColor = "#ffffff";
         event.classList.remove('red-input-hidden');
-        event.classList.remove('red-input-real');
+        event.classList.add('red-input-real');
     } else {
         event.srcElement.style.backgroundColor = "#ff0000";
     }
@@ -258,60 +258,59 @@ function comprovaciones(event) {
 
 function profileNext() {
     var a = 0
-    for (const x of profileInputs) {
+    for (let i=0;i<profileInputs.length;i++) {
+        console.log(i)
         var hiddenInputs = document.querySelectorAll('.red-input-hidden');
         console.log(hiddenInputs);
-        if (x.classList[1] == "profile-mail") {
-            if (ValidateEmail(x)) {
-                console.log(ValidateEmail(x))
-                x.style.color = "#008000";
-                x.style.backgroundColor = "#ffffff";
+        if (profileInputs[i].classList[1] == "profile-mail") {
+            if (ValidateEmail(profileInputs[i])) {
+                console.log(ValidateEmail(profileInputs[i]))
+                profileInputs[i].style.color = "#008000";
+                profileInputs[i].style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
-                x.style.color = "#000000";
-                x.style.backgroundColor = "#ff0000";
-                x.classList.remove('red-input-hidden');
-                x.classList.remove('red-input-real');
+                profileInputs[i].style.color = "#000000";
+                profileInputs[i].style.backgroundColor = "#ff0000";
+                hiddenInputs[i].classList.remove('red-input-hidden');
+                hiddenInputs[i].classList.add('red-input-real');
             }
-        } else if (x.classList[1] == 'profile-password') {
-            if (CheckPassword(x)) {
-                console.log(CheckPassword(x))
-                x.style.color = "#008000";
-                x.style.backgroundColor = "#ffffff";
+        } if (profileInputs[i].classList[1] == 'profile-password') {
+            if (CheckPassword(profileInputs[i])) {
+                console.log(CheckPassword(profileInputs[i]))
+                profileInputs[i].style.color = "#008000";
+                profileInputs[i].style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
-                x.style.color = "#000000";
-                x.style.backgroundColor = "#ff0000";
-                x.classList.remove('red-input-hidden');
-                x.classList.remove('red-input-real');
+                profileInputs[i].style.color = "#000000";
+                profileInputs[i].style.backgroundColor = "#ff0000";
+                hiddenInputs[i].classList.remove('red-input-hidden');
+                hiddenInputs[i].classList.add('red-input-real');
             }
-        } else if (x.classList[1] == 'profile-confirm') {
-            if (ConfirmPassword(x)) {
-                console.log(ConfirmPassword(x))
-                x.style.color = "#008000";
-                x.style.backgroundColor = "#ffffff";
+        } if (profileInputs[i].classList[1] == 'profile-confirm') {
+            if (ConfirmPassword(profileInputs[i])) {
+                console.log(ConfirmPassword(profileInputs[i]))
+                profileInputs[i].style.color = "#008000";
+                profileInputs[i].style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
-                x.style.color = "#000000";
-                x.style.backgroundColor = "#ff0000";
-                x.classList.remove('red-input-hidden');
-                x.classList.remove('red-input-real');
+                profileInputs[i].style.color = "#000000";
+                profileInputs[i].style.backgroundColor = "#ff0000";
+                hiddenInputs[i].classList.remove('red-input-hidden');
+                hiddenInputs[i].classList.add('red-input-real');
             }
         } else {
-            if (x.value.length >= 5 && x.classList[1] !== 'profile-confirm' && x.classList[1] !==
+            if (profileInputs[i].value.length >= 5 && profileInputs[i].classList[1] !== 'profile-confirm' && profileInputs[i].classList[1] !==
                 'profile-password') {
-                x.style.color = "#008000";
-                x.style.backgroundColor = "#ffffff";
+                profileInputs[i].style.color = "#008000";
+                profileInputs[i].style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
-                x.style.backgroundColor = "#ff0000";
+                profileInputs[i].style.backgroundColor = "#ff0000";
+                hiddenInputs[i].classList.remove('red-input-hidden');
+                hiddenInputs[i].classList.add('red-input-real');
             }
         }
-        if (x.style.backgroundColor == "#ffffff") {
+        if (profileInputs[i].style.backgroundColor == "#ffffff") {
             a++
             console.log(a)
         }
