@@ -28,7 +28,8 @@ body {
   font-size: 1.6rem;
   /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
   color: var(--appleFontColor);
-  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
 }
 
 .navbar {
@@ -200,47 +201,41 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-.shipping>h1 {
+.shipping > h1 {
   padding: 2%;
   padding-bottom: 3%;
 }
-
-.shipping>p {
+.shipping > p {
   width: 30%;
   padding: 0.5%;
 }
-
-.shipping>p>input {
+.shipping > p > input {
   margin: 0% 7%;
   border-radius: 50px;
 }
-
-.shipping>i {
+.shipping > i {
   padding: 2%;
 }
-
-.shipping>h3 {
+.shipping > h3 {
   padding: 2%;
   visibility: hidden;
 }
-
 .chekgift-shipping {
   padding: 2%;
 }
-
-.chekgift-shipping>input {
+.chekgift-shipping > input {
   padding: 0% 1%;
 }
-
 .gift-shipping {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
+
 .gift-shipping>div {
   position: absolute;
+
   text-align: center;
   margin: 1%;
   padding: 1%;
@@ -248,6 +243,7 @@ section {
   border-radius: 5px;
   visibility: hidden;
 }
+
 .gm{
   left: 20%;
 }
@@ -268,7 +264,9 @@ section {
    position: relative;
     top: 200px;
 }
-#button-shipping{
+
+#button-shipping {
+
   position: relative;
   top: 200px;
 }
@@ -277,7 +275,11 @@ section {
 /* --------------end shiping -----------------*/
 /* ------------ iPhone 1 ----------------*/
 
-.main-container-iphone1 {
+/* ------------ iPhone 13 (marcel) ----------------*/
+
+
+
+.main-container-iphone1{
   display: flex;
   /* flex-wrap: wrap; */
   /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
@@ -286,8 +288,10 @@ section {
   justify-content: space-evenly;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
 /* --- aside left 1 --- */
-
 
 .aside-iphone1 {
   display: grid;
@@ -302,9 +306,10 @@ section {
 
 /* ---  center 1 --- */
 
-
 .display-center-iphone1 {
   display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .display-main-iphone1 {
@@ -314,26 +319,24 @@ section {
 
 .pick-color-iphone1 {
   text-transform: capitalize;
-  margin-left: 15rem;
   font-size: 3rem;
 }
 
 .opt-colors-iphone1 {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin-top: 3rem;
 }
 
 .item1-cont-iphone1 {
-  grid-column-start: 4;
-  grid-column-end: 5;
-
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .item2-cont-iphone1 {
-  grid-column-start: 7;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .circle-blue-iphone1,
@@ -342,21 +345,20 @@ section {
   width: auto;
 }
 
+
+
 /* --------------finishing --------------------*/
 .finishing {
   width: 70%;
   text-align: right;
   margin: auto;
 }
-
 .title-finishing {
   text-align: center;
 }
-
 .content-finishing {
   overflow-y: scroll;
 }
-
 .compra-finishing {
   height: 120px;
   padding: 2%;
@@ -367,28 +369,23 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-
-.compra-finishing>img {
+.compra-finishing > img {
   width: 10%;
 }
-
-.compra-finishing>div {
+.compra-finishing > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
 }
-
-.compra-finishing>i {
+.compra-finishing > i {
   font-size: 25px;
   cursor: pointer;
 }
-
-.pay-finishing>p {
+.pay-finishing > p {
   padding: 6px;
 }
-
-.pay-finishing>p>strong {
+.pay-finishing > p > strong {
   position: relative;
   right: 150px;
   padding: 10px;
@@ -519,7 +516,7 @@ section {
 }
 
 .txt-blue {
-  color: var(--blueiPhone1)
+  color: var(--blueiPhone1);
 }
 
 .continue-btn-iphone1 {
@@ -529,7 +526,7 @@ section {
 }
 
 .fa-heart {
-  color: var(--blueiPhone1)
+  color: var(--blueiPhone1);
 }
 
 /* ----------- end of  iPhone 13 ----------------*/
@@ -545,9 +542,69 @@ section {
 
 /* --- aside right 2 --- */
 
-
 /* ---------End Of iPhone 13 Pro (marcel) ----------*/
-
+/* --------------finishing --------------------*/
+.finishing {
+  width: 70%;
+  text-align: right;
+  margin: auto;
+}
+.title-finishing {
+  text-align: center;
+}
+.content-finishing {
+  overflow-y: scroll;
+}
+.compra-finishing {
+  height: 120px;
+  padding: 2%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.compra-finishing > img {
+  width: 10%;
+}
+.compra-finishing > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+}
+.compra-finishing > i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.pay-finishing > p > strong {
+  position: relative;
+  right: 150px;
+}
+.pay-finishing > h3 > strong {
+  position: relative;
+  right: 150px;
+}
+.pay-finishing > p > span {
+  position: absolute;
+  right: 15%;
+}
+.pay-finishing > h3 > span {
+  position: absolute;
+  right: 15%;
+}
+.terminos-finishing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn-pay {
+  width: 15%;
+  margin: 3% 45%;
+}
+/* --------------finishing --------------------*/
 
 footer {
   background-color: var(--navbar);
