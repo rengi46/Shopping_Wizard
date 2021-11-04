@@ -80,7 +80,7 @@ function case1ChangeImgToOrange() {
     case1RedFirstSideImg.src = "src/assets/img/MM243_13.jpeg";
     case1RedSecondSideImg.src = "src/assets/img/MM243_AV5_13.jpeg";
     case1RedThirdSideImg.src = "src/assets/img/MM243_AV6_13.jpeg";
-    shopcase=["src/assets/img/MM243_13.jpeg","iPhone 13","Orange","","","55"]
+    shopcase=["src/assets/img/MM243_13.jpeg","iPhone 13","Orange","","55"]
 }
 
 /* Change img src iPhone 13 to Red */
@@ -98,7 +98,7 @@ function case1ChangeImgToRed() {
     case1OrangeFirstSideImg.src = "src/assets/img/MM2C3.jpeg";
     case1OrangeSecondSideImg.src = "src/assets/img/MM2C3_AV5.jpeg";
     case1OrangeThirdSideImg.src = "src/assets/img/MM2C3_AV6.jpeg";
-    shopcase=["src/assets/img/MM2C3.jpeg","iPhone 13","red","","","55"]
+    shopcase=["src/assets/img/MM2C3.jpeg","iPhone 13","red","","55"]
 }
 
 /* Change img to Main Display */
@@ -168,7 +168,7 @@ function case2ChangeImgToOrange() {
     case1RedFirstSideImgCase2.src = "src/assets/img/MM2D3_AV1.jpeg";
     case1RedSecondSideImgCase2.src = "src/assets/img/MM2D3_AV4.jpeg";
     case1RedThirdSideImgCase2.src = "src/assets/img/MM2D3_AV5.jpeg";
-    shopcase=["src/assets/img/MM2D3_AV1.jpeg","iPhone 13 Pro Max","Orange","","","65"]
+    shopcase=["src/assets/img/MM2D3_AV1.jpeg","iPhone 13 Pro Max","Orange","","65"]
 }
 
 /* Change img src iPhone 13 to Red */
@@ -186,7 +186,7 @@ function case2ChangeImgToRed() {
     case1OrangeFirstSideImgCase2.src = "src/assets/img/MM2L3_AV1_Pro.jpeg";
     case1OrangeSecondSideImgCase2.src = "src/assets/img/MM2L3_AV4_Pro.jpeg";
     case1OrangeThirdSideImgCase2.src = "src/assets/img/MM2L3_AV5_Pro.jpeg";
-    shopcase=["src/assets/img/MM2L3_AV1_Pro.jpeg","iPhone 13 Pro Max","Red","","","65"]
+    shopcase=["src/assets/img/MM2L3_AV1_Pro.jpeg","iPhone 13 Pro Max","Red","","65"]
 }
 
 /* Change img to Main Display */
@@ -341,7 +341,8 @@ function shipping(event){
         checks[2].checked=false
         d.setUTCMilliseconds(259200000);
         for (const sh of shoping) {
-            sh[4]=d
+            sh[5]=d
+            sh[6]="72"
         }
         break
         case"i2":
@@ -349,7 +350,8 @@ function shipping(event){
         checks[2].checked=false
         d.setUTCMilliseconds(172800000);
         for (const sh of shoping) {
-            sh[4]=d
+            sh[5]=d
+            sh[6]="48"
         }
         break
         case"i3":
@@ -357,8 +359,8 @@ function shipping(event){
         checks[0].checked=false
         d.setUTCMilliseconds(86400000);
         for (const sh of shoping) {
-            sh[4]=d
-            
+            sh[5]=d
+            sh[6]="24"
         }
         break
     }
@@ -388,7 +390,7 @@ function showTime(a) {
 //          end shopping
 
 // carrito de la compra
-// array carcase
+
 
 
 //array de la compra
@@ -399,6 +401,7 @@ const dad = document.getElementById("content-finishing");
 //creacion de html de cada comanda
 function fin(){
     for(var shop of shoping){
+        console.log(shop)
         var compra = document.createElement("div");
         compra.className="compra-finishing compra";
         var image = document.createElement("img")
@@ -406,10 +409,10 @@ function fin(){
         var title = document.createElement("h2");
         title.innerHTML=shop[1]+" "+shop[2]+" "+shop[3];
         var envio =document.createElement("p");
-        envio.innerHTML="Envio antes de:"+showTime(shop[4]);
+        envio.innerHTML="Envio antes de:"+showTime(shop[5]);
         envio.id="envios"
         var mony = document.createElement("h2");
-        mony.innerHTML=shop[5]+"€";
+        mony.innerHTML=shop[4]+"€";
         mony.className="mony"
         var close = document.createElement("i")
         close.className="fas fa-times-circle close-finishing"
@@ -425,9 +428,9 @@ function fin(){
     var envios = document.getElementById("envios")
     var mony = document.getElementsByClassName("mony")
     //contenendores donde poner el  precio
-    var subtotal = document.getElementById("subTotal-finishing")
-    var envio = document.getElementById("envio-finishing")
-    var total = document.getElementById("total-finishing")
+    var P_subtotal = document.getElementById("subTotal-finishing")
+    var P_envio = document.getElementById("envio-finishing")
+    var P_total = document.getElementById("total-finishing")
 
     //calcular precio productos
     var subtot = 0
@@ -437,11 +440,11 @@ function fin(){
     }
     //calcular precio envios
     var env
-    switch(envios.innerText){
-        case "Envio en :24h":
+    switch(shoping[0][6]){
+        case "24":
             env =10
             break
-        case "Envio en :48h":
+        case "48":
             env =5
             break
         default:
@@ -449,14 +452,13 @@ function fin(){
     }
 
     //poner precios en pantalla
-    subtotal.innerText=subtot+"€"
-    envio.innerText= env+"€"
-    total.innerText= subtot + env +"€"
+    P_subtotal.innerText=subtot+"€"
+    P_envio.innerText= env+"€"
+    P_total.innerText= subtot + env +"€"
 
     let delet =document.querySelectorAll(".close-finishing");
     console.log(delet)
     for (const dele of delet) {
-        console.log(dele)
         dele.addEventListener("click",del)
     }
 }
@@ -476,10 +478,6 @@ else if (check.checked==false){
 }}
 
 //quitar producto en la cesta
-
-
-
-
 function del(event){
     dad.removeChild(event.path[1])
     subtot = 0
@@ -488,13 +486,16 @@ function del(event){
         subtot = sub + subtot
     }
     if(mony.length==0){env=0}
-    subtotal.innerText=subtot+"€"
-    envio.innerText= env+"€"
-    total.innerText= subtot + env +"€"
+    P_subtotal.innerText=subtot+"€"
+    P_envio.innerText= env+"€"
+    P_total.innerText= subtot + env +"€"
 }
 
 
+
 // iPHONE 13
+var shopgiga=[]
+var shopcolor=[]
 
 // color circles
 
@@ -526,7 +527,7 @@ iPinkCircle.addEventListener( 'click', ( e ) => {
     i13Front.src = "src/assets/img/iphone13-pink.png";
     i13Side.src = 'src/assets/img/iphone-13-pink-side.jpeg';
     i13Center.src = "src/assets/img/iphone13-pink.png";
-
+    shopcolor=["src/assets/img/iphone13-pro-graffiti.png","iPhone 13","pink"]
 } );
 
 // 13 blue
@@ -536,7 +537,7 @@ iBlueCircle.addEventListener( 'click', ( e ) => {
     i13Front.src = "src/assets/img/iphone13-blue.png";
     i13Side.src = 'src/assets/img/iphone13-blue-side.png';
     i13Center.src = "src/assets/img/iphone13-blue.png";
-
+    shopcolor=["src/assets/img/iphone13-pro-graffiti.png","iPhone 13","blue"]
 } );
 
 // GIGA BYTES CARDS iPHONE 13
@@ -555,6 +556,7 @@ card128.addEventListener( 'click', () => {
     total = card128Price + subpriceTotal;
     total = total.toFixed( 2 );
     subprice.innerHTML = total + '€';
+    shopgiga=["128G",total]
 } );
 
 card256.addEventListener( 'click', () => {
@@ -562,6 +564,7 @@ card256.addEventListener( 'click', () => {
     total = card256Price + subpriceTotal;
     total = total.toFixed( 2 );
     subprice.innerHTML = total + '€';
+    shopgiga=["256G",total]
 } );
 
 card512.addEventListener( 'click', () => {
@@ -569,12 +572,11 @@ card512.addEventListener( 'click', () => {
     total = card512Price + subpriceTotal;
     total = total.toFixed( 2 );
     subprice.innerHTML = total + '€';
+    shopgiga=["512G",total]
 } );
 
 // BUTTONS CONTINUE & GO TO CART iPHONE 13
 
-const continueBtn = document.getElementById( 'continueBtn' );
-const goToCart = document.getElementById( 'goToCartBtn' );
 
 
 
@@ -611,7 +613,7 @@ proGraffitiCircle.addEventListener( 'click', ( e ) => {
     pro13Front.src = "src/assets/img/iphone13-pro-graffiti.png";
     pro13Side.src = 'src/assets/img/iphone-13-pro-graffiti-side.png';
     pro13Center.src = "src/assets/img/iphone13-pro-graffiti.png";
-
+    shopcolor=["src/assets/img/iphone13-pro-graffiti.png","iPhone 13 Pro Max","graffiti"]
 } );
 
 // Blue PRO
@@ -622,6 +624,7 @@ proBlueCircle.addEventListener( 'click', ( e ) => {
     pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.jpeg';
     pro13Center.src = "src/assets/img/iphone13-pro-blue.png";
 
+    shopcolor=["src/assets/img/iphone13-pro-graffiti.png","iPhone 13 Pro Max","blue"]
 } );
 
 
@@ -643,6 +646,7 @@ card128Pro.addEventListener( 'click', () => {
     totalPro = card128PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed( 2 );
     subpricePro.innerHTML = totalPro + '€';
+    shopgiga=["128G",total]
 } );
 // Card 256 Pro
 card256Pro.addEventListener( 'click', () => {
@@ -650,6 +654,7 @@ card256Pro.addEventListener( 'click', () => {
     totalPro = card256PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed( 2 );
     subpricePro.innerHTML = totalPro + '€';
+    shopgiga=["256G",total]
 } );
 // Card 512 Pro
 card512Pro.addEventListener( 'click', () => {
@@ -657,9 +662,15 @@ card512Pro.addEventListener( 'click', () => {
     totalPro = card512PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed( 2 );
     subpricePro.innerHTML = totalPro + '€';
+    shopgiga=["512G",total]
 } );
 
 // BUTTONS CONTINUE & GO TO CART PRO
 
 const continueBtnPro = document.getElementById('continueBtnPro');
 const goToCartPro = document.getElementById('goToCartBtnPro');
+
+const continueBtn = document.getElementById( 'continueBtn' );
+const goToCart = document.getElementById( 'goToCartBtn' );
+
+
