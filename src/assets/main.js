@@ -33,6 +33,7 @@ function remAdd1() {
     promax_main.removeEventListener("click", remAdd2)
     IPhon13_main.removeEventListener("click", remAdd1)
 }
+
 function remAdd2() {
     promax_main.removeEventListener("mouseover", visiblemax)
     promax_main.removeEventListener("mouseout", visiblemax)
@@ -246,6 +247,8 @@ function comprovaciones(event) {
     if (profile_cont_input.length > 5) {
         event.srcElement.style.color = "#008000";
         event.srcElement.style.backgroundColor = "#ffffff";
+        event.classList.remove('red-input-hidden');
+        event.classList.remove('red-input-real');
     } else {
         event.srcElement.style.backgroundColor = "#ff0000";
     }
@@ -254,6 +257,8 @@ function comprovaciones(event) {
 function profileNext() {
     var a = 0
     for (const x of profileInputs) {
+        var hiddenInputs = querySelectorAll('.x')
+        console.log(hiddenInputs);
         if (x.classList[1] == "profile-mail") {
             if (ValidateEmail(x)) {
                 console.log(ValidateEmail(x))
@@ -264,6 +269,8 @@ function profileNext() {
             } else {
                 x.style.color = "#000000";
                 x.style.backgroundColor = "#ff0000";
+                x.classList.remove('red-input-hidden');
+                x.classList.remove('red-input-real');
             }
         } else if (x.classList[1] == 'profile-password') {
             if (CheckPassword(x)) {
@@ -275,6 +282,8 @@ function profileNext() {
             } else {
                 x.style.color = "#000000";
                 x.style.backgroundColor = "#ff0000";
+                x.classList.remove('red-input-hidden');
+                x.classList.remove('red-input-real');
             }
         } else if (x.classList[1] == 'profile-confirm') {
             if (ConfirmPassword(x)) {
@@ -286,6 +295,8 @@ function profileNext() {
             } else {
                 x.style.color = "#000000";
                 x.style.backgroundColor = "#ff0000";
+                x.classList.remove('red-input-hidden');
+                x.classList.remove('red-input-real');
             }
         } else {
             if (x.value.length >= 5 && x.classList[1] !== 'profile-confirm' && x.classList[1] !==
@@ -616,7 +627,7 @@ function del(event) {
     console.log(subtot)
     console.log(env)
     P_subtotal.innerText = subtot + "€"
-    P_envio.innerText = env +"€"
+    P_envio.innerText = env + "€"
     P_total.innerText = subtot + env + "€"
 }
 
@@ -808,11 +819,12 @@ goToCartPro.addEventListener("click", unirArr)
 continueBtnPro.addEventListener("click", goCasePro)
 
 
-function goCase(){
+function goCase() {
     shopcase = ["src/assets/img/MM2C3.jpeg", "iPhone 13", "red", "", "55"]
     unirArr()
 }
-function goCasePro(){
+
+function goCasePro() {
     shopcase = ["src/assets/img/MM2L3_AV1_Pro.jpeg", "iPhone 13 Pro Max", "Red", "", "65"]
     unirArr()
 }

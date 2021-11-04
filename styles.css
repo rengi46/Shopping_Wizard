@@ -1,6 +1,6 @@
 * {
-  overflow: hidden; 
-
+  /*   overflow: hidden; 
+ */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,7 +90,7 @@ section {
   border-radius: 10px;
 }
 
-.Specs-main > ul > li {
+.Specs-main>ul>li {
   list-style-type: none;
   padding: 5px;
 }
@@ -146,7 +146,7 @@ section {
   transition: all 0.5s;
 }
 
-.IPhon13-main > h2 {
+.IPhon13-main>h2 {
   text-decoration: none;
 }
 
@@ -160,6 +160,7 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+
 /*-----------end main-----------------*/
 .advance {
   display: flex;
@@ -170,7 +171,7 @@ section {
   width: 70%;
 }
 
-.advance > p {
+.advance>p {
   padding: 1%;
 }
 
@@ -182,10 +183,12 @@ section {
 .address {
   text-align: center;
 }
-.address > p {
+
+.address>p {
   padding: 15px;
 }
-.address > div {
+
+.address>div {
   position: absolute;
   right: 20%;
   padding: 10px;
@@ -200,39 +203,47 @@ section {
   justify-content: center;
   align-items: center;
 }
-.shipping > h1 {
+
+.shipping>h1 {
   padding: 2%;
   padding-bottom: 3%;
 }
-.shipping > p {
+
+.shipping>p {
   width: 30%;
   padding: 0.5%;
 }
-.shipping > p > input {
+
+.shipping>p>input {
   margin: 0% 7%;
   border-radius: 50px;
 }
-.shipping > i {
+
+.shipping>i {
   padding: 2%;
 }
-.shipping > h3 {
+
+.shipping>h3 {
   padding: 2%;
   visibility: hidden;
 }
+
 .chekgift-shipping {
   padding: 2%;
 }
-.chekgift-shipping > input {
+
+.chekgift-shipping>input {
   padding: 0% 1%;
 }
+
 .gift-shipping {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.gift-shipping > div {
-  position: absolute;          
+.gift-shipping>div {
+  position: absolute;
   text-align: center;
   margin: 1%;
   padding: 1%;
@@ -244,11 +255,12 @@ section {
 .gm {
   left: 20%;
 }
+
 .gi {
   right: 20%;
 }
 
-.gift-shipping > div > p {
+.gift-shipping>div>p {
   padding: 30px;
 }
 
@@ -290,7 +302,7 @@ section {
 }
 
 .activeiPhones {
-    border:3px solid rgb(17, 124, 210)!important;
+  border: 3px solid rgb(17, 124, 210) !important;
 }
 
 
@@ -366,12 +378,15 @@ section {
   text-align: right;
   margin: auto;
 }
+
 .title-finishing {
   text-align: center;
 }
+
 .content-finishing {
   overflow-y: scroll;
 }
+
 .compra-finishing {
   height: 120px;
   padding: 2%;
@@ -382,43 +397,48 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.compra-finishing > img {
+
+.compra-finishing>img {
   width: 10%;
 }
-.compra-finishing > div {
+
+.compra-finishing>div {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
 }
-.compra-finishing > i {
+
+.compra-finishing>i {
   font-size: 25px;
   cursor: pointer;
 }
-.pay-finishing > p {
+
+.pay-finishing>p {
   padding: 6px;
 }
-.pay-finishing > p > strong {
+
+.pay-finishing>p>strong {
   position: relative;
   right: 150px;
   padding: 10px;
 }
 
-.pay-finishing > p > span {
+.pay-finishing>p>span {
   position: absolute;
   right: 15%;
 }
 
-.pay-finishing > h3 {
+.pay-finishing>h3 {
   padding: 10px;
 }
 
-.pay-finishing > h3 > strong {
+.pay-finishing>h3>strong {
   position: relative;
   right: 150px;
 }
 
-.pay-finishing > h3 > span {
+.pay-finishing>h3>span {
   position: absolute;
   right: 15%;
 }
@@ -434,6 +454,7 @@ section {
   width: 15%;
   margin: 3% 45%;
 }
+
 /* --------------end finishing --------------------*/
 
 /* ----------- iPhone 13 ----------------*/
@@ -569,12 +590,15 @@ section {
   text-align: right;
   margin: auto;
 }
+
 .title-finishing {
   text-align: center;
 }
+
 .content-finishing {
   overflow-y: scroll;
 }
+
 .compra-finishing {
   height: 120px;
   padding: 2%;
@@ -585,52 +609,62 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.compra-finishing > img {
+
+.compra-finishing>img {
   width: 10%;
 }
-.compra-finishing > div {
+
+.compra-finishing>div {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
 }
-.compra-finishing > i {
+
+.compra-finishing>i {
   font-size: 25px;
   cursor: pointer;
 }
-.pay-finishing > p > strong {
+
+.pay-finishing>p>strong {
   position: relative;
   right: 150px;
 }
-.pay-finishing > h3 > strong {
+
+.pay-finishing>h3>strong {
   position: relative;
   right: 150px;
 }
-.pay-finishing > p > span {
+
+.pay-finishing>p>span {
   position: absolute;
   right: 15%;
 }
-.pay-finishing > h3 > span {
+
+.pay-finishing>h3>span {
   position: absolute;
   right: 15%;
 }
+
 .terminos-finishing {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .btn-pay {
   width: 15%;
   margin: 3% 45%;
 }
+
 /* --------------finishing --------------------*/
 
 footer {
   background-color: var(--navbar);
 }
 
-.footer > ul {
+.footer>ul {
   color: var(--characters);
   font-size: 0.7em;
   font-family: var(--navMenu);
