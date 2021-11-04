@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --fondoP: rgba(251, 251, 253, 255);
   --navbar: rgba(48, 48, 48, 255);
@@ -24,7 +25,8 @@ html {
 }
 
 body {
-  font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
+  font-size: 1.6rem;
+  /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
   color: var(--appleFontColor);
   font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
     Helvetica, Arial, sans-serif;
@@ -36,6 +38,7 @@ body {
   position: sticky;
   top: 0px;
   z-index: 1;
+  background-color: red;
   background-color: var(--navbar);
   display: flex;
   align-items: center;
@@ -60,12 +63,15 @@ section {
   /* overflow-y: auto; */
 }
 
+
+/*-----------main-----------------*/
 .title-main {
   padding: 2%;
   text-align: center;
   font-size: var(--fontSizeLarge);
   font-family: var(--navMenu);
 }
+
 .content-main {
   display: flex;
   align-items: center;
@@ -85,10 +91,11 @@ section {
   border-radius: 10px;
 }
 
-.Specs-main > ul > li {
+.Specs-main>ul>li {
   list-style-type: none;
   padding: 5px;
 }
+
 .visible {
   visibility: visible !important;
 }
@@ -97,6 +104,7 @@ section {
   width: 20em;
   height: 23em;
 }
+
 .promax-main {
   background-color: white;
   text-align: center;
@@ -109,19 +117,23 @@ section {
   box-shadow: 0px 0px 2px;
   transition: transform 0.5s;
 }
+
 .promax-main:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border: solid 2px #158df0;
   box-shadow: 0px 0px 5px;
 }
+
 .promax-main:active {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+
 .foto-main {
   text-decoration: none;
   color: black;
 }
+
 .IPhon13-main {
   background-color: white;
   text-align: center;
@@ -134,18 +146,22 @@ section {
   box-shadow: 0px 0px 2px;
   transition: all 0.5s;
 }
-.IPhon13-main > h2 {
+
+.IPhon13-main>h2 {
   text-decoration: none;
 }
+
 .IPhon13-main:hover {
   box-shadow: 0px 0px 5px;
   border: solid 2px #158df0;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+
 .IPhon13-main:active {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+<<<<<<< HEAD
 .advance {
   display: flex;
   justify-content: space-between;
@@ -159,7 +175,41 @@ section {
 }
 .progres-nav {
   border-bottom: #158df0 3px solid;
+=======
+/*-----------end main-----------------*/
+.advance{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: black 1px solid;
+    margin: 2% auto ;
+    width: 70%;
 }
+
+.advance>p {
+  padding: 1%;
+}
+
+.progres-nav {
+  border-bottom: #158df0 3px solid;
+}
+
+/* --------------address -----------------*/
+.address{
+  text-align: center;
+}
+.address>p{
+  padding: 15px;
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
+}
+.address>div{
+  position: absolute;
+  right: 20%;
+  padding: 10px;
+  visibility: hidden;
+}
+
+/* --------------end address -----------------*/
 /* --------------shiping -----------------*/
 .shipping {
   display: flex;
@@ -167,6 +217,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 .shipping > h1 {
   padding: 2%;
   padding-bottom: 3%;
@@ -192,12 +243,52 @@ section {
 .chekgift-shipping > input {
   padding: 0% 1%;
 }
+=======
+
+.shipping>h1 {
+  padding: 2%;
+  padding-bottom: 3%;
+}
+
+.shipping>p {
+  width: 30%;
+  padding: 0.5%;
+}
+
+.shipping>p>input {
+  margin: 0% 7%;
+  border-radius: 50px;
+}
+
+.shipping>i {
+  padding: 2%;
+}
+
+.shipping>h3 {
+  padding: 2%;
+  visibility: hidden;
+}
+
+.chekgift-shipping {
+  padding: 2%;
+}
+
+.chekgift-shipping>input {
+  padding: 0% 1%;
+}
+
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 .gift-shipping {
   display: flex;
   width: 100%;
   justify-content: center;
 }
+<<<<<<< HEAD
 .gift-shipping > div {
+=======
+
+.gift-shipping>div {
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
   text-align: center;
   margin: 1%;
   padding: 1%;
@@ -205,19 +296,38 @@ section {
   border-radius: 5px;
   visibility: hidden;
 }
+<<<<<<< HEAD
 .gift-shipping > div > p {
   padding: 30px;
 }
+=======
+
+.gift-shipping>div>p {
+  padding: 30px;
+}
+
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 .Text-shipping {
   width: 20em;
   height: 10em;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 #button-shipping {
   position: relative;
   bottom: 80px;
   left: 700px;
 }
+<<<<<<< HEAD
 /* --------------shiping -----------------*/
+=======
+
+
+/* --------------end shiping -----------------*/
+/* ------------ iPhone 1 ----------------*/
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 
 /* ------------ iPhone 13 (marcel) ----------------*/
 
@@ -225,12 +335,17 @@ section {
 
 .main-container-iphone1{
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
   min-height: calc(100vh - 6rem);
   align-items: center;
   justify-content: space-evenly;
 }
+<<<<<<< HEAD
+=======
+
+/* --- aside left 1 --- */
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 
 .cursor-pointer {
   cursor: pointer;
@@ -249,6 +364,10 @@ section {
 }
 
 /* ---  center 1 --- */
+<<<<<<< HEAD
+=======
+
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 
 .display-center-iphone1 {
   display: grid;
@@ -258,22 +377,29 @@ section {
 
 .display-main-iphone1 {
   height: 80rem;
+<<<<<<< HEAD
+=======
+  width: auto;
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 }
 
 .pick-color-iphone1 {
   text-transform: capitalize;
   font-size: 3rem;
 }
+
 .opt-colors-iphone1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin-top: 3rem;
 }
+
 .item1-cont-iphone1 {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+
 .item2-cont-iphone1 {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -293,12 +419,24 @@ section {
   text-align: right;
   margin: auto;
 }
+<<<<<<< HEAD
 .title-finishing {
   text-align: center;
 }
 .content-finishing {
   overflow-y: scroll;
 }
+=======
+
+.title-finishing {
+  text-align: center;
+}
+
+.content-finishing {
+  overflow-y: scroll;
+}
+
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 .compra-finishing {
   height: 120px;
   padding: 2%;
@@ -309,15 +447,25 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 .compra-finishing > img {
   width: 10%;
 }
 .compra-finishing > div {
+=======
+
+.compra-finishing>img {
+  width: 10%;
+}
+
+.compra-finishing>div {
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: flex-start;
 }
+<<<<<<< HEAD
 .compra-finishing > i {
   font-size: 25px;
   cursor: pointer;
@@ -326,10 +474,24 @@ section {
   padding: 6px;
 }
 .pay-finishing > p > strong {
+=======
+
+.compra-finishing>i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.pay-finishing>p {
+  padding: 6px;
+}
+
+.pay-finishing>p>strong {
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
   position: relative;
   right: 150px;
   padding: 10px;
 }
+<<<<<<< HEAD
 .pay-finishing > p > span {
   position: absolute;
   right: 15%;
@@ -355,9 +517,46 @@ section {
 .btn-pay {
   width: 15%;
   margin: 3% 45%;
-}
-/* --------------finishing --------------------*/
+=======
 
+.pay-finishing>p>span {
+  position: absolute;
+  right: 15%
+}
+
+.pay-finishing>h3 {
+  padding: 10px;
+}
+
+.pay-finishing>h3>strong {
+  position: relative;
+  right: 150px;
+}
+
+.pay-finishing>h3>span {
+  position: absolute;
+  right: 15%
+}
+
+.terminos-finishing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
+}
+
+<<<<<<< HEAD
+=======
+.btn-pay {
+  width: 15%;
+  margin: 3% 45%;
+}
+/* --------------end finishing --------------------*/
+
+
+/* ----------- iPhone 13 ----------------*/
+>>>>>>> c034fa503cba6eda836044cc1c02a76e24c4cdab
 .opt-border-iphone1 {
   margin: 3rem;
   border: 0.1rem solid var(--blueiPhone1);
@@ -390,6 +589,7 @@ section {
 .horizontal-rule {
   margin: 2rem 0;
 }
+
 .capacity-text-iphone1 {
   text-transform: capitalize;
   font-size: 3rem;
@@ -432,6 +632,7 @@ section {
 .subtotal-iphone1 {
   margin: 2rem 0;
 }
+
 .subprice-iphone1 {
   font-weight: bold;
   font-size: 3rem;
@@ -541,7 +742,7 @@ footer {
   background-color: var(--navbar);
 }
 
-.footer > ul {
+.footer>ul {
   color: var(--characters);
   font-size: 0.7em;
   font-family: var(--navMenu);
@@ -572,23 +773,4 @@ footer {
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
-}
-
-.case1-main-image {
-  height: 550px;
-  width: 550px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-}
-.case1-side-image {
-  height: 150px;
-  width: 150px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-}
-.case1-color-button {
-  height: 25px;
-  width: 25px;
 }
