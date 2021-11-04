@@ -156,6 +156,8 @@ footer {
     margin-right: 15%;
 }
 
+/* Case 1 and Case 2 CSS */
+
 .case1-main-container {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -252,20 +254,20 @@ div>p>a:visited {
     height: 550px;
     width: 550px;
     padding-left: 100px;
-    -webkit-transition: 2s ease;
-    -moz-transition: 2s ease;
-    -ms-transition: 2s ease;
-    transition: 2s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    transition: 1s ease;
 }
 
 .case2-main-image {
     height: 550px;
     width: 550px;
     padding-left: 100px;
-    -webkit-transition: 2s ease;
-    -moz-transition: 2s ease;
-    -ms-transition: 2s ease;
-    transition: 2s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    transition: 1s ease;
 }
 
 .case1-main-image:hover {
@@ -379,4 +381,46 @@ div>p>a:visited {
 
 .case2-end-buttons {
     padding-left: 130px;
+}
+
+/* Profile CSS */
+.profile-ul {
+    list-style-type: none;
+}
+
+.profile-li {
+    list-style-type: none;
+    font-size: 16pt;
+}
+
+.mail {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+    background: #D8F1F8;
+    border: 1px soild silver;
+}
+
+.mail h2 {
+    margin-left: 38px;
+}
+
+.input-li {
+    font-size: 20pt;
+}
+
+input:focus,
+textarea:focus {
+    background-color: lightyellow;
+}
+
+input submit {
+    font-size: 12pt;
+}
+
+.rq-profile-li {
+    color:
+        #FF0000;
+    font-size: 10pt;
 }

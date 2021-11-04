@@ -141,7 +141,7 @@
                 <p>Recogida en <a class="case1-apple-store-link"
                         href="https://www.google.com/maps/place/Apple+Store/@41.3879896,2.1694681,15z/data=!4m2!3m1!1s0x0:0x20f57d5735fb3ffb?sa=X&ved=2ahUKEwjR-ZjNivrzAhVxiv0HHcgMC9MQ_BJ6BAhUEAU">tienda</a>:
                     <b>Hoy</b> </p><br>
-                <p><b>Color - Rojo</b></p>
+                <p><b>Color - <span id="casePro-red">Rojo</span></b></p>
 
             </div>
             <div class="case1-main-display">
@@ -176,14 +176,33 @@
     </section>
 
     <!-- Profile Secction -->
-    <section id="profile" class="profile"></section>
-
-
+    <section id="profile" class="profile" onload='document.form1.text1.focus()'>
+        <form name="form1" action="#">
+            <ul class="profile-ul">
+                <li>User Name</li>
+                <li class="profile-li">&nbsp;</li>
+                <li><input type="text" name="profile-user-name"></li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="rq-profile-li">Password</li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li"><input type='text' name='text1' /></li>
+                <li class="profile-li">&nbsp;</li>
+                <li>Confirm Password</li>
+                <li class="profile-li"><input type="submit" name="submit" value="Submit" class="input-li"
+                        onclick="allnumericplusminus(document.form1.text1)" />
+                </li>
+                <li class="profile-li">&nbsp;</li>
+            </ul>
+        </form>
+        <div class="profile-end-buttons">
+            <a id="profile-continue" class="profile-continue btn-apple" href="#address">Continue</a>
+        </div>
     </section>
 
     <section class="address">
 
     </section>
+
     <section class="shipping">
 
     </section>
@@ -199,6 +218,7 @@
     </footer>
     <script type="text/javascript" src="/case1.js"></script>
     <script type="text/javascript" src="/case2.js"></script>
+    <script type="text/javascript" src="/profile.js"></script>
 
     <!--     <script src='/scriptiPhone1.js'></script> -->
 
