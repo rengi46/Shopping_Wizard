@@ -221,7 +221,9 @@ section {
 
 /* ------------ iPhone 13 (marcel) ----------------*/
 
-.main-container-iphone1 {
+
+
+.main-container-iphone1{
   display: flex;
   flex-wrap: wrap;
   /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
@@ -282,6 +284,8 @@ section {
   height: auto;
   width: auto;
 }
+
+
 
 /* --------------finishing --------------------*/
 .finishing {

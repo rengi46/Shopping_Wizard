@@ -71,7 +71,8 @@
     <!-- Section iPhone 13 (marcel)  -->
 
 
-    <!-- aside left 1-->
+    <!-- Aside left iPhone 13-->
+
     <a name="i13"></a>
     <section class="iphone1">
 
@@ -85,7 +86,7 @@
                 </div>
             </div>
 
-            <!--  center 1 -->
+            <!--  Center 1 iPhone 13-->
 
             <div class="display-center-iphone1">
                 <img id='i13Center' src="./src/assets/img/iphone13-blue.png" alt="" class="display-main-iphone1">
@@ -102,7 +103,7 @@
                 </div>
             </div>
 
-            <!--  aside right 1 -->
+            <!--  Aside right iPhone 13-->
 
             <div class="aside-info-iphone1">
                 <div class="aside-info-inner">
@@ -115,31 +116,45 @@
                         <h5 class="capacity-subtext-iphone1">How much capacity is right for you?</h5>
 
                         <div class="capacity-grid-iphone1">
-                            <div class="capacity-128 gb-grid-item">
+                            <!--  Card 128  -->
+                            <div id='128' class="capacity-128 gb-grid-item cursor-pointer" value='699'>
                                 <h2 class="capacity-gb-text">128gb</h2>
                                 <h5 class="gb-description">From $699 or $29.12/mo.<br> before trade-in*</h5>
                             </div>
-                            <div class="capacity-256 gb-grid-item">
+                            <!--  Card 256  -->
+                            <div id='256' class="capacity-256 gb-grid-item cursor-pointer" value='799'>
                                 <h2 class="capacity-gb-text">256gb</h2>
                                 <h5 class="gb-description">From $799 or $33.29/mo. <br> before trade-in*</h5>
                             </div>
-                            <div class="capacity-512 gb-grid-item">
+                            <!--  Card 512  -->
+                            <div id='512' class="capacity-512 gb-grid-item cursor-pointer" value='999'>
                                 <h2 class="capacity-gb-text">512gb</h2>
                                 <h5 class="gb-description">From $999 or $41.62/mo. <br>before trade-in*</h5>
                             </div>
                         </div>
 
+                        <!-- END of giga bytes cards -->
+
                         <hr class="horizontal-rule">
+                        <!-- subtotal price  -->
                         <div class="subtotal-iphone1">
-                            <span class="subprice-iphone1">$1,029.00</span>
+                            <span id='subprice' class="subprice-iphone1"></span>
                             <h6 class="txt-payment txt-one-time">One-time payment</h6>
                             <h5 class="txt-payment txt-blue">Get 3% Daily Cash with Apple Card</h5>
                             <hr class="horizontal-rule">
+                            <!--  Continue button  iPhone 13-->
 
-                            <div class="continue-btn-iphone1">
-                                <button class="btn-apple">Continue</button>
-                                <i class="far fa-heart blue"></i>
+                            <div class="buttonsiPhone13">
+                                <div id='continueBtn' class="continue-btn-iphone13">
+                                    <button class="btn-apple">Continue</button>
+                                    <i class="far fa-heart blue"></i>
+                                </div>
+<!--   cart buttons iPhone 13 -->
+                                <div id='goToCartBtn' class="goToCart-btn-iphone13">
+                                    <button class="btn-apple">Go To Cart</button>
+                                </div>
                             </div>
+                            <!--  END of continue or go to cart buttons -->
 
                         </div>
                     </div>
@@ -151,9 +166,9 @@
 
     <!-- Section iPhone 13 Pro (marcel))-->
 
-    <section class="iphone13Pro(marcel)">
+    <section class="iphone13ProMarcel">
 
-        <!-- aside left 2-->
+        <!-- Aside left iPhone  PRO -->
         <a name="promax"></a>
         <div class="main-container-iphone1">
 
@@ -166,8 +181,7 @@
                 </div>
             </div>
 
-            <!-- center 2 -->
-
+            <!-- Center iPhone 13 PRO -->
             <div class="display-center-iphone1">
                 <img id='pro13GC' src="./src/assets/img/iphone13-pro-graffiti.png" alt="" class="display-main-iphone1">
                 <h3 class="pick-color-iphone1">choose your finish</h3>
@@ -184,7 +198,7 @@
                 </div>
             </div>
 
-            <!-- aside right 2 -->
+            <!-- Aside right iPhone PRO -->
 
             <div class="aside-info-iphone1">
                 <div class="aside-info-inner">
@@ -195,31 +209,52 @@
                     <div class="capacity-opt-iphone1">
                         <h2 class="capacity-text-iphone1">choose your capacity</h2>
                         <h5 class="capacity-subtext-iphone1">how much capacity is right for you?</h5>
+
                         <div class="capacity-grid-iphone1">
-                            <div class="capacity-128 gb-grid-item">
+
+                            <!--  Card PRO 128-->
+                            <div id='128Pro' class="capacity-128 gb-grid-item">
                                 <h2 class="capacity-gb-text">128gb</h2>
                                 <h5 class="gb-description">From $699 or $29.12/mo. before trade-in*</h5>
                             </div>
-                            <div class="capacity-256 gb-grid-item">
+
+                            <!--  Card PRO 256  -->
+
+                            <div id='256Pro' class="capacity-256 gb-grid-item">
                                 <h2 class="capacity-gb-text">256gb</h2>
                                 <h5 class="gb-description">From $799 or $33.29/mo. before trade-in*</h5>
                             </div>
-                            <div class="capacity-512 gb-grid-item">
+
+                            <!--  Card PRO 512-->
+
+                            <div id='512Pro' class="capacity-512 gb-grid-item">
                                 <h2 class="capacity-gb-text">512gb</h2>
                                 <h5 class="gb-description">From $999 or $41.62/mo. before trade-in*</h5>
                             </div>
                         </div>
+
                         <hr class="horizontal-rule">
+                        <!-- subtotal price iPhone PRO -->
+
                         <div class="subtotal-iphone1">
-                            <span class="subprice-iphone1">$1,029.00</span>
+                            <span id='subpricePro' class="subprice-iphone1"></span>
                             <h6 class="txt-payment txt-one-time">One-time payment</h6>
                             <h5 class="txt-payment txt-blue">Get 3% Daily Cash with Apple Card</h5>
                             <hr class="horizontal-rule">
 
-                            <div class="continue-btn-iphone1">
-                                <button class="btn-apple">Continue</button>
-                                <i class="far fa-heart blue"></i>
+                            <!--  Continue or go to cart buttons iPhone PRO -->
+                            <div class="buttonsiPhone13Pro">
+                                <div id='continueBtnPro' class="continue-btn-iphone13Pro">
+                                    <button class="btn-apple">Continue</button>
+                                    <i class="far fa-heart blue"></i>
+                                </div>
+
+                                <div id='goToCartBtnPro' class="goToCart-btn-iphone13Pro">
+                                    <button class="btn-apple">Go To Cart</button>
+                                </div>
                             </div>
+                            <!--  END Continue or go to cart buttons iPhone PRO -->
+
                         </div>
                     </div>
                 </div>
@@ -228,7 +263,7 @@
     </section>
 
 
-    <!-- End of Section iPhone 13 Pro (marcel)-->
+    <!-- END of Section iPhone 13 Pro (marcel)-->
 
 
 
