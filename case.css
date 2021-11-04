@@ -383,6 +383,7 @@ div>p>a:visited {
 
 /* Profile CSS */
 .profile {
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -413,7 +414,7 @@ div>p>a:visited {
 }
 
 .input-li {
-    font-size: 20pt;
+    font-size: 15pt;
 }
 
 input:focus,

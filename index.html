@@ -46,20 +46,20 @@
                 </ul>
             </div>
             <div class="phone-main">
-            <a class="foto-main" href="#promax">
-                <div id="promax-main" class="promax-main">
-                    <h2>iPhone13ProMax</h2>
-                    <img class="img-main" src="src/assets/img/iphone-13-pro-max blanco.png" alt="">
-                </div>
-            </a>
+                <a class="foto-main" href="#promax">
+                    <div id="promax-main" class="promax-main">
+                        <h2>iPhone13ProMax</h2>
+                        <img class="img-main" src="src/assets/img/iphone-13-pro-max blanco.png" alt="">
+                    </div>
+                </a>
             </div>
             <div class="phone-main">
-            <a class="foto-main" href="#i13">
-                <div id="IPhon13-main" class="IPhon13-main">
-                    <h2>iPhone13</h2>
-                    <img class="img-main" src="src/assets/img/iphone-13-starlight-select-2021.png" alt="">
-                </div>
-            </a>
+                <a class="foto-main" href="#i13">
+                    <div id="IPhon13-main" class="IPhon13-main">
+                        <h2>iPhone13</h2>
+                        <img class="img-main" src="src/assets/img/iphone-13-starlight-select-2021.png" alt="">
+                    </div>
+                </a>
             </div>
 
             <div id="Specs13-main" class="Specs-main">
@@ -94,7 +94,11 @@
             <!--  Center 1 iPhone 13-->
 
             <div class="display-center-iphone1">
-                <img id='i13Center' src="./src/assets/img/iphone13-blue.png" alt="" class="display-main-iphone1">
+
+                <div class="centerImageSized">
+                    <img id='i13Center' src="./src/assets/img/iphone13-blue.png" alt="" class="display-main-iphone1">
+                </div>
+
                 <h3 class="pick-color-iphone1">choose your finish</h3>
                 <div class="opt-colors-iphone1">
                     <div class="item1-cont-iphone1">
@@ -152,9 +156,8 @@
                             <div class="buttonsiPhone13">
                                 <div id='continueBtn' class="continue-btn-iphone13">
                                     <button class="btn-apple">Continue</button>
-                                    <i class="far fa-heart blue"></i>
                                 </div>
-<!--   cart buttons iPhone 13 -->
+                                <!--   cart buttons iPhone 13 -->
                                 <div id='goToCartBtn' class="goToCart-btn-iphone13">
                                     <button class="btn-apple">Go To Cart</button>
                                 </div>
@@ -188,7 +191,10 @@
 
             <!-- Center iPhone 13 PRO -->
             <div class="display-center-iphone1">
-                <img id='pro13GC' src="./src/assets/img/iphone13-pro-graffiti.png" alt="" class="display-main-iphone1">
+                <div class="centerImageSized">
+                    <img id='pro13GC' src="./src/assets/img/iphone13-pro-graffiti.png" alt=""
+                        class="display-main-iphone1">
+                </div>
                 <h3 class="pick-color-iphone1">choose your finish</h3>
                 <div class="opt-colors-iphone1">
                     <div class="item1-cont-iphone1">
@@ -249,9 +255,8 @@
 
                             <!--  Continue or go to cart buttons iPhone PRO -->
                             <div class="buttonsiPhone13Pro">
-                                <div id='continueBtnPro' class="continue-btn-iphone13Pro">
+                                <div id='continueBtnPro' class="continue-btn-iphone13">
                                     <button class="btn-apple">Continue</button>
-                                    <i class="far fa-heart blue"></i>
                                 </div>
 
                                 <div id='goToCartBtnPro' class="goToCart-btn-iphone13Pro">
@@ -283,7 +288,8 @@
                 <p>Pide andes de las 15:00h. <u>y asegura la entrega en menos de 24h.</u></p><br>
                 <p>Recogida en <a class="case1-apple-store-link"
                         href="https://www.google.com/maps/place/Apple+Store/@41.3879896,2.1694681,15z/data=!4m2!3m1!1s0x0:0x20f57d5735fb3ffb?sa=X&ved=2ahUKEwjR-ZjNivrzAhVxiv0HHcgMC9MQ_BJ6BAhUEAU">tienda</a>:
-                    <b>Hoy</b> </p><br>
+                    <b>Hoy</b>
+                </p><br>
                 <p><b>Color - Rojo</b></p>
 
             </div>
@@ -332,7 +338,8 @@
                 <p>Pide andes de las 15:00h. <u>y asegura la entrega en menos de 24h.</u></p><br>
                 <p>Recogida en <a class="case1-apple-store-link"
                         href="https://www.google.com/maps/place/Apple+Store/@41.3879896,2.1694681,15z/data=!4m2!3m1!1s0x0:0x20f57d5735fb3ffb?sa=X&ved=2ahUKEwjR-ZjNivrzAhVxiv0HHcgMC9MQ_BJ6BAhUEAU">tienda</a>:
-                    <b>Hoy</b> </p><br>
+                    <b>Hoy</b>
+                </p><br>
                 <p><b>Color - <span id="casePro-red">Rojo</span></b></p>
 
             </div>
@@ -362,58 +369,72 @@
                 </ul>
             </div>
             <div class="case2-end-buttons">
-                <a id="case2-continue" class="case2-continue btn-apple" href="#profile">Continue</a>
+                <a id="case2-continue" class="case2-continue btn-apple">Continue</a>
             </div>
         </div>
     </section>
 
     <!-- Profile Secction -->
-    <section id="profile" class="profile" onload='document.form1.text1.focus()'>
+    <section id="profile">
         <div class="advance">
             <p class="progres-nav">Profile</p>
             <p>address</p>
             <p>shipping</p>
             <p>finishing</p>
         </div>
-        <form name="form1" action="#">
+        <form id="" name="form1" action="#" class="profile">
             <div class="profile">
                 <ul class="profile-ul">
-                    <li>User Name</li>
                     <li class="profile-li">&nbsp;</li>
-                    <li><input type="text" name="profile-user-name"></li>
                     <li class="profile-li">&nbsp;</li>
-                    <li>E-mail adress</li>
+                    <li> <b>User Name</b> </li>
                     <li class="profile-li">&nbsp;</li>
-                    <li><input type="text" name="profile-user-name"></li>
+                    <li><input minlength="5" maxlength="20" class="input-li profile-user-name" type="text"
+                            name="profile-user-name"></li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="rq-profile-li">Password</li>
+                    <li> <b>E-mail adress</b> </li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li btn-password"><input type='password' name='textpassword' /></li>
+                    <li><input maxlength="50" class="input-li profile-mail" type="text" name="profileMail"></li>
                     <li class="profile-li">&nbsp;</li>
-                    <li>Confirm Password</li>
+                    <li class="rq-profile-li"> <b>Password</b> <br><br>[8 to 15 characters which contain at least one
+                        lowercase
+                        letter,
+                        one uppercase letter, one numeric digit, and one special character]</li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li"><input minlength="8" maxlength="20" type="password" name="password"
-                            class="input-li" onclick="CheckPassword(document.form1.textpassword)" />
+                    <li class="profile-li btn-password"><input minlength="8" maxlength="20"
+                            class="input-li profile-password" type='password' id='textpassword' />
+                    </li>
+                    <li class="profile-li">&nbsp;</li>
+                    <li> <b>Confirm Password</b> </li>
+                    <li class="profile-li">&nbsp;</li>
+                    <li class="profile-li"><input minlength="8" maxlength="20" type="password" id="confirmPassword"
+                            class="input-li profile-confirm" />
                     </li>
                     <li class="profile-li">&nbsp;</li>
                 </ul>
             </div>
             <div class="profile-end-buttons">
-                <a id="profile-continue" class="profile-continue btn-apple" href="#address">Continue</a>
+                <button></button>
+                <a id="profile-continue" class="profile-continue btn-apple">Continue</a>
             </div>
         </form>
     </section>
     <section>
-        <a name="address"></a>
-        <div class="advance"><p>Profile</p> <p class="progres-nav">address</p> <p>shipping</p>   <p  >finishing</p></div>
+        <a name="address">-</a>
+        <div class="advance">
+            <p>Profile</p>
+            <p class="progres-nav">address</p>
+            <p>shipping</p>
+            <p>finishing</p>
+        </div>
         <div class="address">
-            <form action=""  class="address">
+            <form action="" class="address">
                 <p>*First Name <input type="text" maxlength="20" required></p>
                 <p>*Last Name <input type="text" maxlength="20" required></p>
                 <p>*Birthday <input type="date" required></p>
                 <div>delivery Address: <input type="text" maxlength="50"></div>
                 <p>*address: <input type="text" maxlength="50" required></p>
-                <p>*Postal code:<input   class="num-address" type="tel" maxlength="5" required></p>
+                <p>*Postal code:<input class="num-address" type="tel" maxlength="5" required></p>
                 <select name="country" id="select-contry">
                     <option value="Andorra">Andorra</option>
                     <option value="España" selected>España</option>
@@ -422,44 +443,49 @@
                     <option value="Grecia">Grecia</option>
                 </select>
                 <p>Phone number: <select name="" id="select-prefix">
-                    <option value="Andorra">376-AND</option>
-                    <option value="España" selected>34-ESP</option>
-                    <option value="Francia">33-FRA</option>
-                    <option value="Alemaania">49-DEU</option>
-                    <option value="Grecia">30-GRC</option>
-                </select> <input  class="num-address" type="tel" maxlength="9"></p>
+                        <option value="Andorra">376-AND</option>
+                        <option value="España" selected>34-ESP</option>
+                        <option value="Francia">33-FRA</option>
+                        <option value="Alemaania">49-DEU</option>
+                        <option value="Grecia">30-GRC</option>
+                    </select> <input class="num-address" type="tel" maxlength="9"></p>
                 <p>This is not my delivery address </p>
                 <input id="Regular-address" type="checkbox">
             </form>
-            <a id="next-address-a" ><button id="next-address">Next</button></a>
+            <a id="next-address-a"><button id="next-address" class="button-form btn-apple">Next</button></a>
 
         </div>
     </section>
     <section>
         <a name="shipping">-</a>
-        <div class="advance"><p>Profile</p> <p>address</p> <p class="progres-nav">shipping</p>   <p  >finishing</p></div>
-    <div class="shipping">
-        <h1>Opciones de Envio <i class="fas fa-shipping-fast"></i></h1>
-        <p><input class="i1" type="checkbox">Free shipment aprox.72h    <b>0€</b></p>
-        <p><input class="i2" type="checkbox">Extra shipment aprox.48h   <b>5€</b></p>
-        <p><input class="i3" type="checkbox">Premium shipment aprox.24h <b>10€</b></p>
+        <div class="advance">
+            <p>Profile</p>
+            <p>address</p>
+            <p class="progres-nav">shipping</p>
+            <p>finishing</p>
+        </div>
+        <div class="shipping">
+            <h1>Opciones de Envio <i class="fas fa-shipping-fast"></i></h1>
+            <p><input class="i1" type="checkbox">Free shipment aprox.72h <b>0€</b></p>
+            <p><input class="i2" type="checkbox">Extra shipment aprox.48h <b>5€</b></p>
+            <p><input class="i3" type="checkbox">Premium shipment aprox.24h <b>10€</b></p>
 
 
             <h3>Recibe tu pedido de el <strong id="dataEnvio-shipping"></strong></h3>
 
             <div class="chekgift-shipping"><input type="checkbox">is it a gift?</div>
             <div class="gift-shipping">
-                <div>
+                <div class="gm">
                     <p>gift message:</p>
                     <input class="Text-shipping" type="text" maxlength="200">
                 </div>
-                <div>
+                <div class="gi">
                     <p>gift wrapper image</p>
                     <input type="file">
                 </div>
             </div>
 
-            <a href="#finishing"><button disabled id="button-shipping" class="">finish</button></a>
+            <a href="#finishing"><button disabled class="button-form" id="button-shipping">finish</button></a>
         </div>
     </section>
 
@@ -503,46 +529,17 @@
         </div>
     </section>
 
-                <a href="#finishing"><button disabled id="button-shipping" class="">finish</button></a>
-            </div>
-        </section>
+    <a href="#finishing"><button disabled id="button-shipping" class="">finish</button></a>
+    </div>
+    </section>
 
-        <<<<<<< HEAD <section class="finishing">
-            <h1 class="title-finishing">Your bag</h1>
-
-            <hr>
-            <div id="content-finishing">
-                =======
-                <section>
-                    <a name="finishing">-</a>
-                    <div class="advance">
-                        <p>Profile</p>
-                        <p>address</p>
-                        <p>shipping</p>
-                        <p class="progres-nav">finishing</p>
-                    </div>
 
     <footer>
         <ul>
             <li>FOOTER</li>
         </ul>
     </footer>
-    <!--     <script type="text/javascript" src="/case1.js"></script>
-    <script type="text/javascript" src="/case2.js"></script>
-    <script type="text/javascript" src="/profile.js"></script> -->
-
-    <!--     <script src='/scriptiPhone1.js'></script> -->
-    <script src='/src/datos-compra.js'></script>
-
-                <footer>
-                    <ul>
-                        <li>FOOTER</li>
-                    </ul>
-                </footer>
-
-                <script src='/marcel.js'></script>
-                <script src='/src/datos-compra.js'></script>
-                <script src="/src/assets/main.js" defer></script>
+    <script src="/src/assets/main.js" defer></script>
 </body>
 
 </html>
