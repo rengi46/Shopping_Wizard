@@ -95,7 +95,7 @@ function showTime(a) {
     return (year + "-" + month + "-" + Day + " " + hours + ":" + minutes);
 }
 
-/* SetTimeOut and reload of page */
+/* SetTimeOut and reload of page + removeEventlisteners of Case1*/
 
 let btnContinue = document.getElementById("case1-continue");
 
@@ -104,7 +104,7 @@ btnContinue.addEventListener("click", test);
 function test() {
     setTimeout(function () {
         window.location.reload();
-    }, 1000);
+    }, 50000);
 
 }
 
@@ -263,45 +263,25 @@ function case2ChangeSecondToMain() {
 function case2ChangeThirdToMain() {
     case1RedMainImgCase2.src = case1RedThirdSideImgCase2.src;
 }
-/* Password input check */
-function CheckPassword(inputtxt) {
-    var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if (inputtxt.value.match(decimal) && inputtxt.length >= 8 && inputtxt.length <= 20) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 /* Profile validation check */
 
-var profileInputs = document.querySelectorAll(".profile-ul>input")
+var profileInputs = document.querySelectorAll(".profile-ul>li>input")
 console.log(profileInputs);
-var inp = document.querySelector(".address>div")
-var contry = document.getElementById("select-contry")
-var prefix = document.getElementById("select-prefix")
-var num_address = document.getElementById("num-address")
-var regular = document.getElementById("Regular-address")
-var btn_address = document.getElementById("next-address")
-var btn_Next = document.getElementById("next-address-a")
 
+var profileContinuebtn = document.querySelector('#profile-continue');
 
-
+profileContinuebtn.addEventListener('click', profileNext);
 
 //            event lisener
-contry.addEventListener("click", prefix_contry)
-btn_address.addEventListener("click", next)
-regular.addEventListener("click", function () {
-    inp.classList.toggle("visible")
-})
 for (var i = 0; i < profileInputs.length; i++) {
-    inputs[i].addEventListener("mouseup", comprovaciones)
-    inputs[i].addEventListener("keyup", comprovaciones)
+    profileInputs[i].addEventListener("mouseup", comprovaciones)
+    profileInputs[i].addEventListener("keyup", comprovaciones)
 }
 //                    comprobacion validacion
 function comprovaciones(event) {
-    var cont_input = event.srcElement.value;
-    if (cont_input.length > 1) {
+    var profile_cont_input = event.srcElement.value;
+    if (profile_cont_input.length > 1) {
         event.srcElement.style.color = "#008000";
         event.srcElement.style.backgroundColor = "#ffffff";
     } else {
@@ -309,53 +289,91 @@ function comprovaciones(event) {
     }
 }
 
-function next() {
+function profileNext() {
     var a = 0
-    for (const input of inputs) {
-        if (input.classList[0] == "num-address") {
-            if (allnumeric(input)) {
-                console.log(allnumeric(input))
-                input.style.color = "#008000";
-                input.style.backgroundColor = "#ffffff";
+    for (const x of profileInputs) {
+        if (profileInputs.classList[1] == "profile-mail") {
+            if (ValidateEmail(profileInputs)) {
+                console.log(ValidateEmail(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
                 a++
                 console.log(a)
             } else {
-                input.style.color = "#000000";
-                input.style.backgroundColor = "#ff0000";
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        } else if (profileInputs.classList[2] == 'profile-password') {
+            if (CheckPassword(profileInputs)) {
+                console.log(CheckPassword(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        } else if (profileInputs.classList[3] == 'profile-comfirm') {
+            if (ConfirmPassword(profileInputs)) {
+                console.log(ConfirmPassword(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
             }
         } else {
-            if (input.value.length > 1) {
-                input.style.color = "#008000";
-                input.style.backgroundColor = "#ffffff";
+            if (profileInputs.value.length > 1) {
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
                 a++
                 console.log(a)
             } else {
-                input.style.backgroundColor = "#ff0000";
+                profileInputs.style.backgroundColor = "#ff0000";
             }
         }
-
-        if (input.style.backgroundColor == "#ffffff") {
+        if (profileInputs.style.backgroundColor == "#ffffff") {
             a++
             console.log(a)
         }
     }
     if (a == 6) {
-        btn_Next.href = "#shipping"
+        btn_Next.href = "#address"
     }
 
 }
 
-function allnumeric(inputtxt) {
-    var numbers = /^[0-9]+$/;
-    if (inputtxt.value.match(numbers)) {
+function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        document.form1.text1.focus();
+        return true;
+    } else {
+        document.form1.text1.focus();
+        return false;
+    }
+}
+
+
+function CheckPassword(inputtxt) {
+    var passw = /^[A-Za-z]\w{7,14}$/;
+    if (inputtxt.value.match(passw)) {
         return true;
     } else {
         return false;
     }
 }
 
-function prefix_contry() {
-    let a = contry.selectedIndex;
-    prefix.selectedIndex = a;
+function ConfirmPassword(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        document.form1.text1.focus();
+        return true;
+    } else {
+        document.form1.text1.focus();
+        return false;
+    }
 }
-//                              end address

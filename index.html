@@ -329,38 +329,42 @@
     </section>
 
     <!-- Profile Secction -->
-    <section id="profile" class="profile" onload='document.form1.text1.focus()'>
+    <section id="profile" onload='document.form1.text1.focus()'>
         <div class="advance">
             <p class="progres-nav">Profile</p>
             <p>address</p>
             <p>shipping</p>
             <p>finishing</p>
         </div>
-        <form name="form1" action="#">
+        <form id="" name="form1" action="#" class="profile">
             <div class="profile">
                 <ul class="profile-ul">
+                    <li class="profile-li">&nbsp;</li>
+                    <li class="profile-li">&nbsp;</li>
                     <li>User Name</li>
                     <li class="profile-li">&nbsp;</li>
-                    <li><input class="input-li" type="text" name="profile-user-name"></li>
+                    <li><input class="input-li profile-user-name" type="text" name="profile-user-name"></li>
                     <li class="profile-li">&nbsp;</li>
                     <li>E-mail adress</li>
                     <li class="profile-li">&nbsp;</li>
-                    <li><input class="input-li" type="text" name="profile-user-name"></li>
+                    <li><input class="input-li profile-mail" type="text" name="profile-mail"></li>
                     <li class="profile-li">&nbsp;</li>
                     <li class="rq-profile-li">Password</li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li btn-password"><input class="input-li" type='password' name='textpassword' />
+                    <li class="profile-li btn-password"><input class="input-li profile-password" type='password'
+                            name='textpassword' />
                     </li>
                     <li class="profile-li">&nbsp;</li>
                     <li>Confirm Password</li>
                     <li class="profile-li">&nbsp;</li>
                     <li class="profile-li"><input minlength="8" maxlength="20" type="password" name="password"
-                            class="input-li" onclick="CheckPassword(document.form1.textpassword)" />
+                            class="input-li profile-confirm" />
                     </li>
                     <li class="profile-li">&nbsp;</li>
                 </ul>
             </div>
             <div class="profile-end-buttons">
+                <button></button>
                 <a id="profile-continue" class="profile-continue btn-apple" href="#address">Continue</a>
             </div>
         </form>
