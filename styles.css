@@ -1,11 +1,11 @@
-
 * {
-     /* overflow: hidden;  */
- 
+  /* overflow: hidden;  */
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --fondoP: rgba(251, 251, 253, 255);
   --navbar: rgba(48, 48, 48, 255);
@@ -25,7 +25,8 @@ html {
 }
 
 body {
-  font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
+  font-size: 1.6rem;
+  /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
   color: var(--appleFontColor);
   font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -66,6 +67,7 @@ section {
   font-size: var(--fontSizeLarge);
   font-family: var(--navMenu);
 }
+
 .content-main {
   display: flex;
   align-items: center;
@@ -85,18 +87,20 @@ section {
   border-radius: 10px;
 }
 
-.Specs-main > ul > li {
+.Specs-main>ul>li {
   list-style-type: none;
   padding: 5px;
 }
+
 .visible {
-  visibility: visible!important;
+  visibility: visible !important;
 }
 
 .img-main {
   width: 20em;
   height: 23em;
 }
+
 .promax-main {
   background-color: white;
   text-align: center;
@@ -109,19 +113,23 @@ section {
   box-shadow: 0px 0px 2px;
   transition: transform 0.5s;
 }
+
 .promax-main:hover {
   transform: scale(1.2);
   border: solid 2px #158df0;
   box-shadow: 0px 0px 5px;
 }
+
 .promax-main:active {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
+
 .foto-main {
   text-decoration: none;
   color: black;
 }
+
 .IPhon13-main {
   background-color: white;
   text-align: center;
@@ -134,87 +142,109 @@ section {
   box-shadow: 0px 0px 2px;
   transition: all 0.5s;
 }
-.IPhon13-main > h2 {
+
+.IPhon13-main>h2 {
   text-decoration: none;
 }
+
 .IPhon13-main:hover {
   box-shadow: 0px 0px 5px;
   border: solid 2px #158df0;
   transform: scale(1.2);
 }
+
 .IPhon13-main:active {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
-.advance{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    border-bottom: black 1px solid;
-    margin: 2% auto ;
-    width: 70%;
+
+.advance {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: black 1px solid;
+  margin: 2% auto;
+  width: 70%;
 }
-.advance>p{padding: 1%;}
-.progres-nav{
-    border-bottom: #158df0 3px solid;
+
+.advance>p {
+  padding: 1%;
 }
+
+.progres-nav {
+  border-bottom: #158df0 3px solid;
+}
+
 /* --------------shiping -----------------*/
-.shipping{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.shipping {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.shipping>h1{
-    padding: 2%;
-    padding-bottom: 3%;
+
+.shipping>h1 {
+  padding: 2%;
+  padding-bottom: 3%;
 }
-.shipping>p{
-    width: 30%;
-    padding: 0.5%;
+
+.shipping>p {
+  width: 30%;
+  padding: 0.5%;
 }
-.shipping>p>input{
-    margin: 0% 7%;
-    border-radius: 50px;
+
+.shipping>p>input {
+  margin: 0% 7%;
+  border-radius: 50px;
 }
-.shipping>i{
-    padding: 2%;
+
+.shipping>i {
+  padding: 2%;
 }
-.shipping>h3{
+
+.shipping>h3 {
   padding: 2%;
   visibility: hidden;
 }
-.chekgift-shipping{
-    padding: 2%;
+
+.chekgift-shipping {
+  padding: 2%;
 }
-.chekgift-shipping>input{
-    padding: 0% 1%;
+
+.chekgift-shipping>input {
+  padding: 0% 1%;
 }
-.gift-shipping{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+
+.gift-shipping {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-.gift-shipping>div{
-    text-align: center;
-    margin: 1%;
-    padding: 1%;
-    border: black 1px solid;
-    border-radius: 5px;
-    visibility: hidden;
+
+.gift-shipping>div {
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  border: black 1px solid;
+  border-radius: 5px;
+  visibility: hidden;
 }
-.gift-shipping>div>p{
+
+.gift-shipping>div>p {
   padding: 30px;
 }
-.Text-shipping{
+
+.Text-shipping {
   width: 20em;
   height: 10em;
 }
-#button-shipping{
+
+#button-shipping {
   position: relative;
   bottom: 80px;
   left: 700px;
 }
+
 /* --------------shiping -----------------*/
 /* ------------ iPhone 1 ----------------*/
 
@@ -226,7 +256,8 @@ section {
   align-items: center;
   justify-content: space-evenly;
 }
-        /* --- aside left 1 --- */
+
+/* --- aside left 1 --- */
 
 
 .aside-iphone1 {
@@ -240,7 +271,7 @@ section {
   width: auto;
 }
 
-        /* ---  center 1 --- */
+/* ---  center 1 --- */
 
 
 .display-center-iphone1 {
@@ -248,7 +279,7 @@ section {
 }
 
 .display-main-iphone1 {
-  height:80rem;
+  height: 80rem;
   width: auto;
 }
 
@@ -257,96 +288,114 @@ section {
   margin-left: 15rem;
   font-size: 3rem;
 }
+
 .opt-colors-iphone1 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
   margin-top: 3rem;
 }
+
 .item1-cont-iphone1 {
   grid-column-start: 4;
   grid-column-end: 5;
 
 }
+
 .item2-cont-iphone1 {
   grid-column-start: 7;
   grid-column-end: 8;
 }
 
-.circle-blue-iphone1, .circle-pink-iphone1{
+.circle-blue-iphone1,
+.circle-pink-iphone1 {
   height: auto;
-  width:auto;
+  width: auto;
 }
 
 /* --------------finishing --------------------*/
-.finishing{
+.finishing {
   width: 70%;
-    text-align: right;
-    margin: auto;
-}
-.title-finishing{
-    text-align: center;
-}
-.content-finishing{
-  overflow-y: scroll;
-}
-.compra-finishing{
-    height: 120px;
-    padding: 2%;
-    border: solid 1px gray;
-    border-radius: 10px;
-    margin: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.compra-finishing>img{
-    width:10% ;
-}
-.compra-finishing>div{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    align-content: flex-start;
-}
-.compra-finishing>i{
-    font-size: 25px;
-    cursor: pointer;
-}
-.pay-finishing>p{
-  padding:6px;
-}
-.pay-finishing>p>strong{
-    position: relative;
-    right: 150px;
-    padding:10px;
-}
-.pay-finishing>p>span{
-  position: absolute;
-  right:15%
-}
-.pay-finishing>h3{
-  padding:10px;
-}
-.pay-finishing>h3>strong{
-    position: relative;
-    right: 150px;
+  text-align: right;
+  margin: auto;
 }
 
-.pay-finishing>h3>span{
-    position: absolute;
-    right:15%
+.title-finishing {
+  text-align: center;
 }
-.terminos-finishing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
+.content-finishing {
+  overflow-y: scroll;
 }
-.btn-pay{
-    width: 15%;
-    margin: 3% 45%;
+
+.compra-finishing {
+  height: 120px;
+  padding: 2%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.compra-finishing>img {
+  width: 10%;
+}
+
+.compra-finishing>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.compra-finishing>i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.pay-finishing>p {
+  padding: 6px;
+}
+
+.pay-finishing>p>strong {
+  position: relative;
+  right: 150px;
+  padding: 10px;
+}
+
+.pay-finishing>p>span {
+  position: absolute;
+  right: 15%
+}
+
+.pay-finishing>h3 {
+  padding: 10px;
+}
+
+.pay-finishing>h3>strong {
+  position: relative;
+  right: 150px;
+}
+
+.pay-finishing>h3>span {
+  position: absolute;
+  right: 15%
+}
+
+.terminos-finishing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-pay {
+  width: 15%;
+  margin: 3% 45%;
+}
+
 /* --------------finishing --------------------*/
 
 
@@ -377,12 +426,13 @@ section {
 
 .aside-description-iphone1 {
   font-size: 1.7rem;
- margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .horizontal-rule {
   margin: 2rem 0;
 }
+
 .capacity-text-iphone1 {
   text-transform: capitalize;
   font-size: 3rem;
@@ -395,7 +445,7 @@ section {
   margin: 2rem 0;
 }
 
-.capacity-grid-iphone1{
+.capacity-grid-iphone1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -407,10 +457,10 @@ section {
 
 .gb-grid-item {
   border: 1px solid grey;
-padding: 1.5rem 0;
-border-radius: 10px;
-font-size: small;
-line-height: 1.5rem;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  font-size: small;
+  line-height: 1.5rem;
 }
 
 .capacity-gb-text {
@@ -425,6 +475,7 @@ line-height: 1.5rem;
 .subtotal-iphone1 {
   margin: 2rem 0;
 }
+
 .subprice-iphone1 {
   font-weight: bold;
   font-size: 3rem;
@@ -460,8 +511,8 @@ line-height: 1.5rem;
 /* --- aside left 2 --- */
 
 .circle-graffiti-iphone1 {
-height: 6.5rem;
-width: auto;
+  height: 6.5rem;
+  width: auto;
 }
 
 /* --- aside right 2 --- */
@@ -474,7 +525,7 @@ footer {
   background-color: var(--navbar);
 }
 
-.footer > ul {
+.footer>ul {
   color: var(--characters);
   font-size: 0.7em;
   font-family: var(--navMenu);
@@ -505,23 +556,4 @@ footer {
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
-}
-
-.case1-main-image {
-  height: 550px;
-  width: 550px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-}
-.case1-side-image {
-  height: 150px;
-  width: 150px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-}
-.case1-color-button {
-  height: 25px;
-  width: 25px;
 }

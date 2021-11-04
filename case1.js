@@ -7,7 +7,8 @@ btnContinue.addEventListener("click", test);
 function test() {
   setTimeout(function () {
     window.location.reload();
-  }, 50000);
+  }, 1000);
+
 }
 
 /* Legend dynamic */
