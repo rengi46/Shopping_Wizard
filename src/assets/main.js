@@ -281,9 +281,11 @@ function CheckPassword(inputtxt) {
 //                  dom
 var inputs=document.querySelectorAll(".address>p>input")
 var inp=document.querySelector(".address>div")
+var num_address = document.getElementById("num-address")
 var regular = document.getElementById("Regular-address")
 var btn_address = document.getElementById("next-address")
 var btn_Next = document.getElementById("next-address-a")
+
 
 
 //            event lisener
@@ -308,6 +310,20 @@ function comprovaciones(event){
 function next(){
     var a =0
     for (const input of inputs) {
+        if(input.classList[0]=="num-address"){
+            if(allnumeric(input)){
+                console.log(allnumeric(input))
+                input.style.color="#008000";
+                input.style.backgroundColor="#ffffff";
+                a++
+                console.log(a)
+            }
+            else{
+                input.style.color="#000000";
+                input.style.backgroundColor="#ff0000";
+            }
+        }
+        else{
         if(input.value.length>1){
             input.style.color="#008000";
             input.style.backgroundColor="#ffffff";
@@ -317,6 +333,8 @@ function next(){
         else{
             input.style.backgroundColor="#ff0000";
         }
+        }
+
         if(input.style.backgroundColor=="#ffffff"){
             a++
             console.log(a)
@@ -327,15 +345,23 @@ function next(){
     }
 
 }
-
+function allnumeric(inputtxt)
+{
+    var numbers = /^[0-9]+$/;
+    if(inputtxt.value.match(numbers))
+    {
+    return true;
+    }
+    else
+    {
+    return false;
+    }
+}
 
 
 // carrito de la compra
 // array carcase
-var case1naranja=document.getElementsByClassName(".orange-button")
-var case1rojo=document.getElementsByClassName(".red-button")
-var case2naranja=document.getElementsByClassName(".orange-button2")
-var case2rojo=document.getElementsByClassName(".red-button2")
+
 
 //array de la compra
 var shoping =[["/src/assets/img/-blue.png","IPhone13","blue","512G","48h","1259"],
