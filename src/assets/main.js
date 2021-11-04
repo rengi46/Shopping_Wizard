@@ -131,6 +131,7 @@ let btnContinueCase2 = document.getElementById("case2-continue");
 btnContinueCase2.addEventListener("click", test);
 
 function test() {
+    btnContinueCase2.href = '#profile'
     setTimeout(function () {
         window.location.reload();
     }, 50000);
@@ -218,6 +219,10 @@ var profileInputs = document.querySelectorAll(".profile-ul>li>input")
 console.log(profileInputs);
 
 var profileContinuebtn = document.querySelector('#profile-continue');
+/* var correctPassword = document.querySelector('.profile-password');
+var toConfirmPassword = document.querySelector('.profile-confirm');
+toConfirmPassword.innerText = '';
+correctPassword.innerText = ''; */
 
 profileContinuebtn.addEventListener('click', profileNext);
 
@@ -229,7 +234,7 @@ for (var i = 0; i < profileInputs.length; i++) {
 //                    comprobacion validacion
 function comprovaciones(event) {
     var profile_cont_input = event.srcElement.value;
-    if (profile_cont_input.length > 1) {
+    if (profile_cont_input.length > 5) {
         event.srcElement.style.color = "#008000";
         event.srcElement.style.backgroundColor = "#ffffff";
     } else {
@@ -251,7 +256,7 @@ function profileNext() {
                 x.style.color = "#000000";
                 x.style.backgroundColor = "#ff0000";
             }
-        } else if (x.classList[2] == 'profile-password') {
+        } else if (x.classList[1] == 'profile-password') {
             if (CheckPassword(x)) {
                 console.log(CheckPassword(x))
                 x.style.color = "#008000";
@@ -262,7 +267,7 @@ function profileNext() {
                 x.style.color = "#000000";
                 x.style.backgroundColor = "#ff0000";
             }
-        } else if (x.classList[3] == 'profile-comfirm') {
+        } else if (x.classList[1] == 'profile-confirm') {
             if (ConfirmPassword(x)) {
                 console.log(ConfirmPassword(x))
                 x.style.color = "#008000";
@@ -274,7 +279,8 @@ function profileNext() {
                 x.style.backgroundColor = "#ff0000";
             }
         } else {
-            if (x.value.length > 5) {
+            if (x.value.length >= 5 && x.classList[1] !== 'profile-confirm' && x.classList[1] !==
+                'profile-password') {
                 x.style.color = "#008000";
                 x.style.backgroundColor = "#ffffff";
                 a++
@@ -314,14 +320,12 @@ function CheckPassword(inputtxt) {
 }
 
 function ConfirmPassword(inputText) {
-    var correctPassword = document.querySelector('.profile-password');
-    if (inputText.innerText == correctPassword.innerText) {
-        document.form1.confirmPassword.focus();
+    var pw1 = document.getElementById('textpassword').value
+    var pw2 = document.getElementById('confirmPassword').value
+    console.log(pw1);
+    if (pw1 === pw2) {
         return true;
-    } else {
-        document.form1.confirmPassword.focus();
-        return false;
-    }
+    } else {}
 }
 
 //                 address
