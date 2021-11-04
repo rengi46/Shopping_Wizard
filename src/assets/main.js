@@ -36,7 +36,7 @@ function remAdd(){
 
 
 
-/* SetTimeOut and reload of page */
+/* SetTimeOut and reload of page + removeEventlisteners of Case1*/
 
 let btnContinue = document.getElementById("case1-continue");
 
@@ -45,7 +45,7 @@ btnContinue.addEventListener("click", test);
 function test() {
     setTimeout(function () {
         window.location.reload();
-    }, 1000);
+    }, 50000);
 
 }
 
@@ -211,12 +211,117 @@ function case2ChangeSecondToMain() {
 function case2ChangeThirdToMain() {
     case1RedMainImgCase2.src = case1RedThirdSideImgCase2.src;
 }
-/* Password input check */
-function CheckPassword(inputtxt) {
-    var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if (inputtxt.value.match(decimal) && inputtxt.length >= 8 && inputtxt.length <= 20) {
+
+/* Profile validation check */
+
+var profileInputs = document.querySelectorAll(".profile-ul>li>input")
+console.log(profileInputs);
+
+var profileContinuebtn = document.querySelector('#profile-continue');
+
+profileContinuebtn.addEventListener('click', profileNext);
+
+//            event lisener
+for (var i = 0; i < profileInputs.length; i++) {
+    profileInputs[i].addEventListener("mouseup", comprovaciones)
+    profileInputs[i].addEventListener("keyup", comprovaciones)
+}
+//                    comprobacion validacion
+function comprovaciones(event) {
+    var profile_cont_input = event.srcElement.value;
+    if (profile_cont_input.length > 1) {
+        event.srcElement.style.color = "#008000";
+        event.srcElement.style.backgroundColor = "#ffffff";
+    } else {
+        event.srcElement.style.backgroundColor = "#ff0000";
+    }
+}
+
+function profileNext() {
+    var a = 0
+    for (const x of profileInputs) {
+        if (profileInputs.classList[1] == "profile-mail") {
+            if (ValidateEmail(profileInputs)) {
+                console.log(ValidateEmail(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        } else if (profileInputs.classList[2] == 'profile-password') {
+            if (CheckPassword(profileInputs)) {
+                console.log(CheckPassword(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        } else if (profileInputs.classList[3] == 'profile-comfirm') {
+            if (ConfirmPassword(profileInputs)) {
+                console.log(ConfirmPassword(profileInputs))
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.color = "#000000";
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        } else {
+            if (profileInputs.value.length > 1) {
+                profileInputs.style.color = "#008000";
+                profileInputs.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                profileInputs.style.backgroundColor = "#ff0000";
+            }
+        }
+        if (profileInputs.style.backgroundColor == "#ffffff") {
+            a++
+            console.log(a)
+        }
+    }
+    if (a == 6) {
+        btn_Next.href = "#address"
+    }
+
+}
+
+function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        document.form1.text1.focus();
         return true;
     } else {
+        document.form1.text1.focus();
+        return false;
+    }
+}
+
+
+function CheckPassword(inputtxt) {
+    var passw = /^[A-Za-z]\w{7,14}$/;
+    if (inputtxt.value.match(passw)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function ConfirmPassword(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        document.form1.text1.focus();
+        return true;
+    } else {
+        document.form1.text1.focus();
         return false;
     }
 }
