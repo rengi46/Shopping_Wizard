@@ -240,12 +240,19 @@ section {
 }
 
 .gift-shipping>div {
+  position: absolute;
   text-align: center;
   margin: 1%;
   padding: 1%;
   border: black 1px solid;
   border-radius: 5px;
   visibility: hidden;
+}
+.gm{
+  left: 20%;
+}
+.gi{
+  right: 20%;
 }
 
 .gift-shipping>div>p {
@@ -257,10 +264,13 @@ section {
   height: 10em;
 }
 
-#button-shipping {
+.button-form {
+   position: relative;
+    top: 200px;
+}
+#button-shipping{
   position: relative;
-  bottom: 80px;
-  left: 700px;
+  top: 200px;
 }
 
 
