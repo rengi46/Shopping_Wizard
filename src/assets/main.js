@@ -479,13 +479,23 @@ else if (check.checked==false){
 
 //quitar producto en la cesta
 function del(event){
+    var envios = document.getElementById("envios")
+    var mony = document.getElementsByClassName("mony")
+    //contenendores donde poner el  precio
+    var P_subtotal = document.getElementById("subTotal-finishing")
+    var P_envio = document.getElementById("envio-finishing")
+    var P_total = document.getElementById("total-finishing")
+
     dad.removeChild(event.path[1])
+    
     subtot = 0
     for (const mon of mony) {
         var sub=parseFloat(mon.innerText.replace(/€/g,""))
         subtot = sub + subtot
     }
     if(mony.length==0){env=0}
+    console.log(subtot)
+    console.log(env)
     P_subtotal.innerText=subtot+"€"
     P_envio.innerText= env+"€"
     P_total.innerText= subtot + env +"€"
@@ -673,4 +683,13 @@ const goToCartPro = document.getElementById('goToCartBtnPro');
 const continueBtn = document.getElementById( 'continueBtn' );
 const goToCart = document.getElementById( 'goToCartBtn' );
 
+goToCart.addEventListener("click",unirArr)
+continueBtn.addEventListener("click",unirArr)
+goToCartPro.addEventListener("click",unirArr)
+continueBtnPro.addEventListener("click",unirArr)
 
+
+function unirArr(){
+    var shopIphone=shopcolor.concat(shopgiga)
+    shoping.push(shopIphone)
+}
