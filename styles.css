@@ -63,7 +63,6 @@ section {
   /* overflow-y: auto; */
 }
 
-
 /*-----------main-----------------*/
 .title-main {
   padding: 2%;
@@ -91,7 +90,7 @@ section {
   border-radius: 10px;
 }
 
-.Specs-main>ul>li {
+.Specs-main > ul > li {
   list-style-type: none;
   padding: 5px;
 }
@@ -147,7 +146,7 @@ section {
   transition: all 0.5s;
 }
 
-.IPhon13-main>h2 {
+.IPhon13-main > h2 {
   text-decoration: none;
 }
 
@@ -162,16 +161,16 @@ section {
   box-shadow: 0px 0px 10px #158df0;
 }
 /*-----------end main-----------------*/
-.advance{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    border-bottom: black 1px solid;
-    margin: 2% auto ;
-    width: 70%;
+.advance {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: black 1px solid;
+  margin: 2% auto;
+  width: 70%;
 }
 
-.advance>p {
+.advance > p {
   padding: 1%;
 }
 
@@ -180,13 +179,13 @@ section {
 }
 
 /* --------------address -----------------*/
-.address{
+.address {
   text-align: center;
 }
-.address>p{
+.address > p {
   padding: 15px;
 }
-.address>div{
+.address > div {
   position: absolute;
   right: 20%;
   padding: 10px;
@@ -232,8 +231,7 @@ section {
   justify-content: center;
 }
 
-
-.gift-shipping>div {
+.gift-shipping > div {
   position: absolute;
 
   text-align: center;
@@ -244,14 +242,14 @@ section {
   visibility: hidden;
 }
 
-.gm{
+.gm {
   left: 20%;
 }
-.gi{
+.gi {
   right: 20%;
 }
 
-.gift-shipping>div>p {
+.gift-shipping > div > p {
   padding: 30px;
 }
 
@@ -261,25 +259,21 @@ section {
 }
 
 .button-form {
-   position: relative;
-    top: 200px;
-}
-
-#button-shipping {
-
   position: relative;
   top: 200px;
 }
 
+#button-shipping {
+  position: relative;
+  top: 200px;
+}
 
 /* --------------end shiping -----------------*/
 /* ------------ iPhone 1 ----------------*/
 
 /* ------------ iPhone 13 (marcel) ----------------*/
 
-
-
-.main-container-iphone1{
+.main-container-iphone1 {
   display: flex;
   /* flex-wrap: wrap; */
   /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
@@ -291,6 +285,16 @@ section {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.fade {
+  opacity: 0.5;
+}
+
+.activeiPhones {
+    border:3px solid rgb(17, 124, 210)!important;
+}
+
+
 /* --- aside left 1 --- */
 
 .aside-iphone1 {
@@ -306,6 +310,13 @@ section {
 
 /* ---  center 1 --- */
 
+.centerImageSized {
+  height: 550px;
+  width: 550px;
+  overflow: hidden;
+  padding: 0 6rem;
+}
+
 .display-center-iphone1 {
   display: grid;
   justify-items: center;
@@ -315,6 +326,11 @@ section {
 .display-main-iphone1 {
   height: 50rem;
   width: auto;
+}
+
+.display-main-iphone1:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in
 }
 
 .pick-color-iphone1 {
@@ -344,8 +360,6 @@ section {
   height: 4rem;
   width: auto;
 }
-
-
 
 /* --------------finishing --------------------*/
 .finishing {
@@ -391,23 +405,23 @@ section {
   padding: 10px;
 }
 
-.pay-finishing>p>span {
+.pay-finishing > p > span {
   position: absolute;
-  right: 15%
+  right: 15%;
 }
 
-.pay-finishing>h3 {
+.pay-finishing > h3 {
   padding: 10px;
 }
 
-.pay-finishing>h3>strong {
+.pay-finishing > h3 > strong {
   position: relative;
   right: 150px;
 }
 
-.pay-finishing>h3>span {
+.pay-finishing > h3 > span {
   position: absolute;
-  right: 15%
+  right: 15%;
 }
 
 .terminos-finishing {
@@ -422,7 +436,6 @@ section {
   margin: 3% 45%;
 }
 /* --------------end finishing --------------------*/
-
 
 /* ----------- iPhone 13 ----------------*/
 .opt-border-iphone1 {
@@ -486,6 +499,17 @@ section {
   border-radius: 10px;
   font-size: small;
   line-height: 1.5rem;
+  height: 9rem;
+  width: 15.4rem;
+  overflow: hidden;
+}
+
+.gb-grid-item:hover {
+  border: 1px solid var(--blueiPhone1);
+}
+
+.gb-grid-item:active {
+  border: 2px solid var(--blueiPhone1);
 }
 
 .capacity-gb-text {
@@ -519,14 +543,11 @@ section {
   color: var(--blueiPhone1);
 }
 
-.continue-btn-iphone1 {
-  display: flex;
+.continue-btn-iphone13 {
+  display: inline-block;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.fa-heart {
-  color: var(--blueiPhone1);
+  margin-bottom: 2rem;
 }
 
 /* ----------- end of  iPhone 13 ----------------*/
@@ -610,7 +631,7 @@ footer {
   background-color: var(--navbar);
 }
 
-.footer>ul {
+.footer > ul {
   color: var(--characters);
   font-size: 0.7em;
   font-family: var(--navMenu);

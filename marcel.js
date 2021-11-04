@@ -11,14 +11,22 @@ let i13Front = document.getElementById( 'iP13BF' );
 let i13Side = document.getElementById( 'iP13BS' );
 let i13Center = document.getElementById( 'i13Center' );
 
+// CSS efects
+
+
+
 // small images clicked display in center
 
 i13Side.addEventListener( 'click', () => {
     i13Center.src = i13Side.src;
+    i13Side.classList.remove('fade');
+    i13Front.classList.add('fade');
 } );
 
 i13Front.addEventListener( 'click', () => {
     i13Center.src = i13Front.src;
+    i13Front.classList.remove('fade');
+    i13Side.classList.add('fade')
 } );
 
 //  CHOOSE COLORS
@@ -28,7 +36,7 @@ i13Front.addEventListener( 'click', () => {
 iPinkCircle.addEventListener( 'click', ( e ) => {
 
     i13Front.src = "src/assets/img/iphone13-pink.png";
-    i13Side.src = 'src/assets/img/iphone-13-pink-side.jpeg';
+    i13Side.src = 'src/assets/img/iphone-13-pink-side.png';
     i13Center.src = "src/assets/img/iphone13-pink.png";
 
 } );
@@ -59,6 +67,7 @@ card128.addEventListener( 'click', () => {
     total = card128Price + subpriceTotal;
     total = total.toFixed( 2 );
     subprice.innerHTML = total + '€';
+    card128.classList.toggle('activeiPhones')
 } );
 
 card256.addEventListener( 'click', () => {
@@ -123,9 +132,8 @@ proGraffitiCircle.addEventListener( 'click', ( e ) => {
 proBlueCircle.addEventListener( 'click', ( e ) => {
 
     pro13Front.src = "src/assets/img/iphone13-pro-blue.png";
-    pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.jpeg';
+    pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.png';
     pro13Center.src = "src/assets/img/iphone13-pro-blue.png";
-
 } );
 
 
@@ -143,6 +151,7 @@ var subpriceTotalPro = 999;
 
 // Card 128 Pro
 card128Pro.addEventListener( 'click', () => {
+
     let card128PricePro = 699;
     totalPro = card128PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed( 2 );
