@@ -213,7 +213,8 @@ section {
   left: 700px;
 }
 /* --------------shiping -----------------*/
-/* ------------ iPhone 1 ----------------*/
+
+/* ------------ iPhone 13 (marcel) ----------------*/
 
 .main-container-iphone1 {
   display: flex;
@@ -222,6 +223,10 @@ section {
   min-height: calc(100vh - 6rem);
   align-items: center;
   justify-content: space-evenly;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
         /* --- aside left 1 --- */
 
@@ -242,103 +247,38 @@ section {
 
 .display-center-iphone1 {
   display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .display-main-iphone1 {
   height:80rem;
-  width: auto;
 }
 
 .pick-color-iphone1 {
   text-transform: capitalize;
-  margin-left: 15rem;
   font-size: 3rem;
 }
 .opt-colors-iphone1 {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin-top: 3rem;
 }
 .item1-cont-iphone1 {
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
 
 }
 .item2-cont-iphone1 {
-  grid-column-start: 7;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .circle-blue-iphone1, .circle-pink-iphone1{
   height: auto;
   width:auto;
 }
-
-/* --------------finishing --------------------*/
-.finishing{
-    width: 70%;
-    text-align: right;
-    margin: auto;
-}
-.title-finishing{
-    text-align: center;
-}
-.content-finishing{
-  overflow-y: scroll;
-}
-.compra-finishing{
-    height: 120px;
-    padding: 2%;
-    border: solid 1px gray;
-    border-radius: 10px;
-    margin: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.compra-finishing>img{
-    width:10% ;
-}
-.compra-finishing>div{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    align-content: flex-start;
-}
-.compra-finishing>i{
-    font-size: 25px;
-    cursor: pointer;
-}
-.pay-finishing>p>strong{
-    position: relative;
-    right: 150px;
-}
-.pay-finishing>h3>strong{
-    position: relative;
-    right: 150px;
-}
-.pay-finishing>p>span{
-    position: absolute;
-    right:15%
-}
-.pay-finishing>h3>span{
-    position: absolute;
-    right:15%
-}
-.terminos-finishing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.btn-pay{
-    width: 15%;
-    margin: 3% 45%;
-}
-/* --------------finishing --------------------*/
-
-
 
 .opt-border-iphone1 {
   margin: 3rem;
@@ -457,6 +397,72 @@ width: auto;
 
 
 /* ---------End Of iPhone 13 Pro (marcel) ----------*/
+/* --------------finishing --------------------*/
+.finishing{
+    width: 70%;
+    text-align: right;
+    margin: auto;
+}
+.title-finishing{
+    text-align: center;
+}
+.content-finishing{
+  overflow-y: scroll;
+}
+.compra-finishing{
+    height: 120px;
+    padding: 2%;
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.compra-finishing>img{
+    width:10% ;
+}
+.compra-finishing>div{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    align-content: flex-start;
+}
+.compra-finishing>i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.pay-finishing>p>strong{
+    position: relative;
+    right: 150px;
+}
+.pay-finishing>h3>strong{
+    position: relative;
+    right: 150px;
+}
+.pay-finishing>p>span{
+    position: absolute;
+    right:15%
+}
+.pay-finishing>h3>span{
+    position: absolute;
+    right:15%
+}
+.terminos-finishing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn-pay{
+    width: 15%;
+    margin: 3% 45%;
+}
+/* --------------finishing --------------------*/
+
+
+
+
 
 
 footer {

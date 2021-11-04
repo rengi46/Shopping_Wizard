@@ -70,36 +70,36 @@
 
     <!-- Section iPhone 13 (marcel)  -->
 
-    <section class="iphone1">
+  section class="iphone1"
 
-        <!-- aside left 1-->
+          <!-- aside left 1 -->
 
         <div class="main-container-iphone1">
             <div class="aside-iphone1">
                 <div>
-                    <img src="./src/assets/img/iphone13-blue.png" alt="">
+                    <img id='iP13BF' src="./src/assets/img/iphone13-blue.png" class='cursor-pointer' alt="">
                 </div>
                 <div>
-                    <img src="./src/assets/img/iphone-13-blue-side.jpeg" alt="">
+                    <img id='iP13BS' src="./src/assets/img/iphone13-blue-side.png" alt="" class='cursor-pointer'>
                 </div>
             </div>
 
-            <!-- center 1 -->
+         <!--  center 1 -->
 
             <div class="display-center-iphone1">
-                <img src="./src/assets/img/iphone13-blue.png" alt="" class="display-main-iphone1">
+                <img id='i13Center' src="./src/assets/img/iphone13-blue.png" alt="" class="display-main-iphone1">
                 <h3 class="pick-color-iphone1">choose your finish</h3>
                 <div class="opt-colors-iphone1">
-                    <div class="item1-cont-iphone1">
-                        <img src="./src/assets/img/circle-pink.jpg" alt="" class="circle-pink-iphone1">
-                    </div>
-                    <div class="item2-cont-iphone1">
-                        <img src="./src/assets/img/circle-blue.jpg" alt="" class="circle-blue-iphone1">
-                    </div>
-                </div>
+                        <div class="item1-cont-iphone1">
+                            <img id='i13Pcircle' src="./src/assets/img/circle-pink.jpg" alt="" class="circle-pink-iphone1 cursor-pointer">
+                        </div>
+                        <div class="item2-cont-iphone1">
+                            <img id='i13Bcircle' src="./src/assets/img/circle-blue.jpg" alt="" class="circle-blue-iphone1 cursor-pointer">
+                        </div>
+                        </div>
             </div>
 
-            <!-- aside right 1 -->
+           <!--  aside right 1 -->
 
             <div class="aside-info-iphone1">
                 <div class="aside-info-inner">
@@ -118,7 +118,7 @@
                             </div>
                             <div class="capacity-256 gb-grid-item">
                                 <h2 class="capacity-gb-text">256gb</h2>
-                                <h5 class="gb-description">From $799 or $33.29/mo. <br>  before trade-in*</h5>
+                                <h5 class="gb-description">From $799 or $33.29/mo. <br> before trade-in*</h5>
                             </div>
                             <div class="capacity-512 gb-grid-item">
                                 <h2 class="capacity-gb-text">512gb</h2>
@@ -156,24 +156,26 @@
 
             <div class="aside-iphone1">
                 <div>
-                    <img src="./src/assets/img/iphone13-pro-graffiti.png" alt="">
+                    <img id='pro13GF' src="./src/assets/img/iphone13-pro-graffiti.png" alt="">
                 </div>
                 <div>
-                    <img src="./src/assets/img/iphone-13-pro-graphite-side.jpeg" alt="">
+                    <img id='pro13GS' src="./src/assets/img/iphone-13-pro-graffiti-side.png" alt="">
                 </div>
             </div>
 
             <!-- center 2 -->
 
             <div class="display-center-iphone1">
-                <img src="./src/assets/img/iphone13-pro-graffiti.png" alt="" class="display-main-iphone1">
+                <img id='pro13GC' src="./src/assets/img/iphone13-pro-graffiti.png" alt="" class="display-main-iphone1">
                 <h3 class="pick-color-iphone1">choose your finish</h3>
                 <div class="opt-colors-iphone1">
                     <div class="item1-cont-iphone1">
-                        <img src="./src/assets/img/circle-graffiti.jpeg" alt="" class="circle-graffiti-iphone1">
+
+                        <img id='proGcircle' src="./src/assets/img/circle-graffiti.jpeg" alt="" class="circle-graffiti-iphone1">
                     </div>
                     <div class="item2-cont-iphone1">
-                        <img src="./src/assets/img/circle-blue.jpg" alt="" class="circle-blue-iphone1">
+
+                        <img id='proBcircle' src="./src/assets/img/circle-blue.jpg" alt="" class="circle-blue-iphone1">
                     </div>
                 </div>
             </div>
@@ -277,11 +279,16 @@
 
     </section>
     <section class="shipping">
-        <div class="advance"><p>Profile</p> <p>address</p> <p class="progres-nav">shipping</p>   <p  >finishing</p></div>
+        <div class="advance">
+            <p>Profile</p>
+            <p>address</p>
+            <p class="progres-nav">shipping</p>
+            <p>finishing</p>
+        </div>
 
         <h1>Opciones de Envio <i class="fas fa-shipping-fast"></i></h1>
-        <p><input class="i1" type="checkbox">Free shipment aprox.72h    <b>0€</b></p>
-        <p><input class="i2" type="checkbox">Extra shipment aprox.48h   <b>5€</b></p>
+        <p><input class="i1" type="checkbox">Free shipment aprox.72h <b>0€</b></p>
+        <p><input class="i2" type="checkbox">Extra shipment aprox.48h <b>5€</b></p>
         <p><input class="i3" type="checkbox">Premium shipment aprox.24h <b>10€</b></p>
 
 
@@ -303,31 +310,31 @@
     </section>
 
     <section class="finishing">
-            <h1 class="title-finishing">Your bag</h1>
+        <h1 class="title-finishing">Your bag</h1>
 
+        <hr>
+        <div id="content-finishing">
+
+
+        </div>
+        <hr>
+        <div class="pay-finishing">
+            <p><strong>Subtotal:</strong>
+                <span id="subTotal-finishing"></span>
+            </p>
+            <p><strong>Envio:</strong>
+                <span id="envio-finishing"></span>
+            </p>
             <hr>
-            <div id="content-finishing">
+            <h3><strong>Total:</strong>
+                <span id="total-finishing"></span>
+            </h3>
 
-
+            <div class="terminos-finishing"><a href="">Terminos y condiciones</a>
+                <input type="checkbox" id="checkbox-finishing">
+                <button disabled id="btn-finishing" class=" btn-pay">Pay</button>
             </div>
-            <hr>
-            <div class="pay-finishing">
-                <p><strong>Subtotal:</strong>
-                    <span id="subTotal-finishing"></span>
-                </p>
-                <p><strong>Envio:</strong>
-                    <span id="envio-finishing"></span>
-                </p>
-                <hr>
-                <h3><strong>Total:</strong>
-                    <span id="total-finishing"></span>
-                </h3>
-
-                <div class="terminos-finishing"><a href="">Terminos y condiciones</a>
-                    <input type="checkbox" id="checkbox-finishing">
-                    <button disabled id="btn-finishing" class=" btn-pay">Pay</button>
-                </div>
-            </div>
+        </div>
     </section>
 
 
@@ -337,10 +344,8 @@
         </ul>
     </footer>
 
-    <script src='/scriptiPhone1.js'></script>
+    <script src='/marcel.js'></script>
     <script src='/src/datos-compra.js'></script>
-
-
     <script src="/src/assets/main.js" defer></script>
 </body>
 
