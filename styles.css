@@ -307,7 +307,7 @@ section {
 }
 
 .display-main-iphone1 {
-  height: 80rem;
+  height: 50rem;
   width: auto;
 }
 
@@ -335,7 +335,7 @@ section {
 
 .circle-blue-iphone1,
 .circle-pink-iphone1 {
-  height: auto;
+  height: 4rem;
   width: auto;
 }
 
@@ -448,11 +448,11 @@ section {
 
 .aside-title-iphone1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .aside-description-iphone1 {
-  font-size: 1.7rem;
+  font-size: 1rem;
   margin: 2rem 0;
 }
 
@@ -462,13 +462,13 @@ section {
 
 .capacity-text-iphone1 {
   text-transform: capitalize;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 2rem 0;
 }
 
 .capacity-subtext-iphone1 {
   color: var(--blueiPhone1);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin: 2rem 0;
 }
 
@@ -500,16 +500,16 @@ section {
 }
 
 .subtotal-iphone1 {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .subprice-iphone1 {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .txt-payment {
-  font-size: 1.6rem;
+  font-size: 1rem;
   padding: 0.3rem 0;
 }
 
@@ -538,7 +538,7 @@ section {
 /* --- aside left 2 --- */
 
 .circle-graffiti-iphone1 {
-  height: 6.5rem;
+  height: 4rem;
   width: auto;
 }
 
