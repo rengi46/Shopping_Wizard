@@ -56,6 +56,7 @@ btnContinue.addEventListener("click", test);
 function test() {
     setTimeout(function () {
         window.location.reload();
+        window.scrollTo(0, 0);
     }, 50000);
 
 }
@@ -145,6 +146,7 @@ function test() {
     btnContinueCase2.href = '#profile'
     setTimeout(function () {
         window.location.reload();
+        window.scrollTo(0, 0);
     }, 50000);
     shoping.push(shopcase)
 }
@@ -257,7 +259,7 @@ function comprovaciones(event) {
 function profileNext() {
     var a = 0
     for (const x of profileInputs) {
-        var hiddenInputs = querySelectorAll('.x')
+        var hiddenInputs = document.querySelectorAll('.red-input-hidden');
         console.log(hiddenInputs);
         if (x.classList[1] == "profile-mail") {
             if (ValidateEmail(x)) {
@@ -346,6 +348,21 @@ function ConfirmPassword(inputText) {
     if (pw1 === pw2) {
         return true;
     } else {}
+}
+
+//Clear Profile Form
+
+let profileClearButton = document.querySelector('.profile-clear');
+
+profileClearButton.addEventListener('click', clearProfileForm);
+
+function clearProfileForm() {
+    var contentProfileInput = document.querySelectorAll('.profile-ul>li>input');
+    console.log(contentProfileInput);
+    for (const x of contentProfileInput) {
+        x.value = '';
+        console.log(x.value);
+    }
 }
 
 //                 address
