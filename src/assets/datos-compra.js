@@ -1,6 +1,11 @@
+// array carcase
+var case1naranja=document.getElementsByClassName(".orange-button")
+var case1rojo=document.getElementsByClassName(".red-button")
+var case2naranja=document.getElementsByClassName(".orange-button2")
+var case2rojo=document.getElementsByClassName(".red-button2")
 
 //array de la compra
-var shoping =[["/src/assets/img/iphone13-blue.png","IPhone13","blue","512G","48h","1259"],
+var shoping =[["/src/assets/img/-blue.png","IPhone13","blue","512G","48h","1259"],
 ["/src/assets/img/iphone13-pink-cover.png","IPhone13 cover","Pink","","48h","59"]];
 //contenedor padre
 const dad = document.getElementById("content-finishing");

@@ -37,6 +37,7 @@ body {
   position: sticky;
   top: 0px;
   z-index: 1;
+  background-color: red;
   background-color: var(--navbar);
   display: flex;
   align-items: center;
@@ -61,6 +62,8 @@ section {
   /* overflow-y: auto; */
 }
 
+
+/*-----------main-----------------*/
 .title-main {
   padding: 2%;
   text-align: center;
@@ -115,7 +118,7 @@ section {
 }
 
 .promax-main:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border: solid 2px #158df0;
   box-shadow: 0px 0px 5px;
 }
@@ -150,21 +153,21 @@ section {
 .IPhon13-main:hover {
   box-shadow: 0px 0px 5px;
   border: solid 2px #158df0;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .IPhon13-main:active {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
-
-.advance {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  border-bottom: black 1px solid;
-  margin: 2% auto;
-  width: 70%;
+/*-----------end main-----------------*/
+.advance{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: black 1px solid;
+    margin: 2% auto ;
+    width: 70%;
 }
 
 .advance>p {
@@ -175,6 +178,21 @@ section {
   border-bottom: #158df0 3px solid;
 }
 
+/* --------------address -----------------*/
+.address{
+  text-align: center;
+}
+.address>p{
+  padding: 15px;
+}
+.address>div{
+  position: absolute;
+  right: 20%;
+  padding: 10px;
+  visibility: hidden;
+}
+
+/* --------------end address -----------------*/
 /* --------------shiping -----------------*/
 .shipping {
   display: flex;
@@ -245,7 +263,8 @@ section {
   left: 700px;
 }
 
-/* --------------shiping -----------------*/
+
+/* --------------end shiping -----------------*/
 /* ------------ iPhone 1 ----------------*/
 
 .main-container-iphone1 {
@@ -395,11 +414,10 @@ section {
   width: 15%;
   margin: 3% 45%;
 }
-
-/* --------------finishing --------------------*/
-
+/* --------------end finishing --------------------*/
 
 
+/* ----------- iPhone 13 ----------------*/
 .opt-border-iphone1 {
   margin: 3rem;
   border: 0.1rem solid var(--blueiPhone1);

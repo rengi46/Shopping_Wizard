@@ -45,18 +45,23 @@
                     <li><b>Batery:</b>4,352 mAh</li>
                 </ul>
             </div>
+            <div class="phone-main">
             <a class="foto-main" href="#promax">
                 <div id="promax-main" class="promax-main">
                     <h2>iPhone13ProMax</h2>
                     <img class="img-main" src="src/assets/img/iphone-13-pro-max blanco.png" alt="">
                 </div>
             </a>
+            </div>
+            <div class="phone-main">
             <a class="foto-main" href="#i13">
                 <div id="IPhon13-main" class="IPhon13-main">
                     <h2>iPhone13</h2>
                     <img class="img-main" src="src/assets/img/iphone-13-starlight-select-2021.png" alt="">
                 </div>
             </a>
+            </div>
+
             <div id="Specs13-main" class="Specs-main">
                 <h3>Specs</h3>
                 <ul>
@@ -351,23 +356,46 @@
             <a id="profile-continue" class="profile-continue btn-apple" href="#address">Continue</a>
         </div>
     </section>
-
-    <section class="address">
-
+    <section>
+        <a name="address"></a>
+        <div class="advance"><p>Profile</p> <p class="progres-nav">address</p> <p>shipping</p>   <p  >finishing</p></div>
+        <div class="address">
+            <form action=""  class="address">
+                <p>*First Name <input type="text" maxlength="20" required></p>
+                <p>*Last Name <input type="text" maxlength="20" required></p>
+                <p>*Birthday <input type="date" required></p>
+                <div>delivery Address: <input type="text" maxlength="50"></div>
+                <p>*address: <input type="text" maxlength="50" required></p>
+                <p>*Postal code:<input type="tel" maxlength="5" required></p>
+                <select name="country" id="">
+                    <option value="Andorra">Andorra</option>
+                    <option value="España" selected>España</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Alemaania">Alemaania</option>
+                    <option value="Grecia">Grecia</option>
+                </select>
+                <p>Phone number: <select name="" id="">
+                    <option value="Andorra">376-AND</option>
+                    <option value="España" selected>34-ESP</option>
+                    <option value="Francia">33-FRA</option>
+                    <option value="Alemaania">49-DEU</option>
+                    <option value="Grecia">30-GRC</option>
+                </select> <input type="tel" maxlength="9"></p>
+                <p>This is not my delivery address </p>
+                <input id="Regular-address" type="checkbox"> 
+            </form>
+            <a id="next-address-a" ><button id="next-address">Next</button></a>
+            
+        </div>
     </section>
     <section>
-        <a name="shipping"></a>
-        <div class="advance">
-            <p>Profile</p>
-            <p>address</p>
-            <p class="progres-nav">shipping</p>
-            <p>finishing</p>
-        </div>
-        <div class="shipping">
-            <h1>Opciones de Envio <i class="fas fa-shipping-fast"></i></h1>
-            <p><input class="i1" type="checkbox">Free shipment aprox.72h <b>0€</b></p>
-            <p><input class="i2" type="checkbox">Extra shipment aprox.48h <b>5€</b></p>
-            <p><input class="i3" type="checkbox">Premium shipment aprox.24h <b>10€</b></p>
+        <a name="shipping">-</a>
+        <div class="advance"><p>Profile</p> <p>address</p> <p class="progres-nav">shipping</p>   <p  >finishing</p></div>
+    <div class="shipping">
+        <h1>Opciones de Envio <i class="fas fa-shipping-fast"></i></h1>
+        <p><input class="i1" type="checkbox">Free shipment aprox.72h    <b>0€</b></p>
+        <p><input class="i2" type="checkbox">Extra shipment aprox.48h   <b>5€</b></p>
+        <p><input class="i3" type="checkbox">Premium shipment aprox.24h <b>10€</b></p>
 
 
             <h3>Recibe tu pedido de el <strong id="dataEnvio-shipping"></strong></h3>
