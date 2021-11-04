@@ -11,8 +11,8 @@ promax_main.addEventListener("mouseover", visiblemax)
 promax_main.addEventListener("mouseout", visiblemax)
 IPhon13_main.addEventListener("mouseover", visible13)
 IPhon13_main.addEventListener("mouseout", visible13)
-IPhon13_main.addEventListener("click", remAdd)
-promax_main.addEventListener("click", remAdd)
+IPhon13_main.addEventListener("click", remAdd1)
+promax_main.addEventListener("click", remAdd2)
 
 
 function visiblemax() {
@@ -24,13 +24,23 @@ function visible13() {
 }
 
 
-function remAdd() {
+function remAdd1() {
     promax_main.removeEventListener("mouseover", visiblemax)
     promax_main.removeEventListener("mouseout", visiblemax)
     IPhon13_main.removeEventListener("mouseover", visible13)
     IPhon13_main.removeEventListener("mouseout", visible13)
-    promax_main.removeEventListener("click", remAdd)
-    IPhon13_main.removeEventListener("click", remAdd)
+    shopcolor = ["src/assets/img/iphone13-blue.png", "iPhone 13", "blue"]
+    promax_main.removeEventListener("click", remAdd2)
+    IPhon13_main.removeEventListener("click", remAdd1)
+}
+function remAdd2() {
+    promax_main.removeEventListener("mouseover", visiblemax)
+    promax_main.removeEventListener("mouseout", visiblemax)
+    IPhon13_main.removeEventListener("mouseover", visible13)
+    IPhon13_main.removeEventListener("mouseout", visible13)
+    shopcolor = ["src/assets/img/iphone13-pro-graffiti.png", "iPhone 13 Pro Max", "Graffiti"]
+    promax_main.removeEventListener("click", remAdd2)
+    IPhon13_main.removeEventListener("click", remAdd1)
 }
 
 
@@ -136,7 +146,6 @@ function test() {
         window.location.reload();
     }, 50000);
     shoping.push(shopcase)
-    console.log(shoping)
 }
 
 /* Legend dynamic */
@@ -216,7 +225,7 @@ function case2ChangeThirdToMain() {
 /* Profile validation check */
 
 var profileInputs = document.querySelectorAll(".profile-ul>li>input")
-console.log(profileInputs);
+//console.log(profileInputs);
 
 var profileContinuebtn = document.querySelector('#profile-continue');
 /* var correctPassword = document.querySelector('.profile-password');
@@ -368,11 +377,9 @@ function next() {
     for (const input of inputs) {
         if (input.classList[0] == "num-address") {
             if (allnumeric(input)) {
-                console.log(allnumeric(input))
                 input.style.color = "#008000";
                 input.style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
                 input.style.color = "#000000";
                 input.style.backgroundColor = "#ff0000";
@@ -382,7 +389,6 @@ function next() {
                 input.style.color = "#008000";
                 input.style.backgroundColor = "#ffffff";
                 a++
-                console.log(a)
             } else {
                 input.style.backgroundColor = "#ff0000";
             }
@@ -390,7 +396,6 @@ function next() {
 
         if (input.style.backgroundColor == "#ffffff") {
             a++
-            console.log(a)
         }
     }
     if (a == 6) {
@@ -503,7 +508,6 @@ const dad = document.getElementById("content-finishing");
 //creacion de html de cada comanda
 function fin() {
     for (var shop of shoping) {
-        console.log(shop)
         var compra = document.createElement("div");
         compra.className = "compra-finishing compra";
         var image = document.createElement("img")
@@ -559,7 +563,6 @@ function fin() {
     P_total.innerText = subtot + env + "€"
 
     let delet = document.querySelectorAll(".close-finishing");
-    console.log(delet)
     for (const dele of delet) {
         dele.addEventListener("click", del)
     }
@@ -582,7 +585,6 @@ function abtn() {
 
 //quitar producto en la cesta
 function del(event) {
-    var envios = document.getElementById("envios")
     var mony = document.getElementsByClassName("mony")
     //contenendores donde poner el  precio
     var P_subtotal = document.getElementById("subTotal-finishing")
@@ -590,19 +592,31 @@ function del(event) {
     var P_total = document.getElementById("total-finishing")
 
     dad.removeChild(event.path[1])
-
     subtot = 0
     for (const mon of mony) {
         var sub = parseFloat(mon.innerText.replace(/€/g, ""))
         subtot = sub + subtot
     }
+
+    var env
+    switch (shoping[0][6]) {
+        case "24":
+            env = 10
+            break
+        case "48":
+            env = 5
+            break
+        default:
+            env = 0
+    }
+    console.log(mony.length)
     if (mony.length == 0) {
         env = 0
     }
     console.log(subtot)
     console.log(env)
     P_subtotal.innerText = subtot + "€"
-    P_envio.innerText = env + "€"
+    P_envio.innerText = env +"€"
     P_total.innerText = subtot + env + "€"
 }
 
@@ -642,7 +656,7 @@ iPinkCircle.addEventListener('click', (e) => {
     i13Front.src = "src/assets/img/iphone13-pink.png";
     i13Side.src = 'src/assets/img/iphone-13-pink-side.jpeg';
     i13Center.src = "src/assets/img/iphone13-pink.png";
-    shopcolor = ["src/assets/img/iphone13-pro-graffiti.png", "iPhone 13", "pink"]
+    shopcolor = ["src/assets/img/iphone13-pink.png", "iPhone 13", "pink"]
 });
 
 // 13 blue
@@ -652,7 +666,7 @@ iBlueCircle.addEventListener('click', (e) => {
     i13Front.src = "src/assets/img/iphone13-blue.png";
     i13Side.src = 'src/assets/img/iphone13-blue-side.png';
     i13Center.src = "src/assets/img/iphone13-blue.png";
-    shopcolor = ["src/assets/img/iphone13-pro-graffiti.png", "iPhone 13", "blue"]
+    shopcolor = ["src/assets/img/iphone13-blue.png", "iPhone 13", "blue"]
 });
 
 // GIGA BYTES CARDS iPHONE 13
@@ -739,7 +753,7 @@ proBlueCircle.addEventListener('click', (e) => {
     pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.jpeg';
     pro13Center.src = "src/assets/img/iphone13-pro-blue.png";
 
-    shopcolor = ["src/assets/img/iphone13-pro-graffiti.png", "iPhone 13 Pro Max", "blue"]
+    shopcolor = ["src/assets/img/iphone13-pro-blue.png", "iPhone 13 Pro Max", "blue"]
 });
 
 
@@ -761,7 +775,7 @@ card128Pro.addEventListener('click', () => {
     totalPro = card128PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed(2);
     subpricePro.innerHTML = totalPro + '€';
-    shopgiga = ["128G", total]
+    shopgiga = ["128G", totalPro]
 });
 // Card 256 Pro
 card256Pro.addEventListener('click', () => {
@@ -769,7 +783,7 @@ card256Pro.addEventListener('click', () => {
     totalPro = card256PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed(2);
     subpricePro.innerHTML = totalPro + '€';
-    shopgiga = ["256G", total]
+    shopgiga = ["256G", totalPro]
 });
 // Card 512 Pro
 card512Pro.addEventListener('click', () => {
@@ -777,7 +791,7 @@ card512Pro.addEventListener('click', () => {
     totalPro = card512PricePro + subpriceTotalPro;
     totalPro = totalPro.toFixed(2);
     subpricePro.innerHTML = totalPro + '€';
-    shopgiga = ["512G", total]
+    shopgiga = ["512G", totalPro]
 });
 
 // BUTTONS CONTINUE & GO TO CART PRO
@@ -789,9 +803,19 @@ const continueBtn = document.getElementById('continueBtn');
 const goToCart = document.getElementById('goToCartBtn');
 
 goToCart.addEventListener("click", unirArr)
-continueBtn.addEventListener("click", unirArr)
+continueBtn.addEventListener("click", goCase)
 goToCartPro.addEventListener("click", unirArr)
-continueBtnPro.addEventListener("click", unirArr)
+continueBtnPro.addEventListener("click", goCasePro)
+
+
+function goCase(){
+    shopcase = ["src/assets/img/MM2C3.jpeg", "iPhone 13", "red", "", "55"]
+    unirArr()
+}
+function goCasePro(){
+    shopcase = ["src/assets/img/MM2L3_AV1_Pro.jpeg", "iPhone 13 Pro Max", "Red", "", "65"]
+    unirArr()
+}
 
 
 function unirArr() {
