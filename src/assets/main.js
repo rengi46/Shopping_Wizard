@@ -1,3 +1,4 @@
+var shoping=[]
 //           main
 //            dom
 var Specsmax_main = document.getElementById("Specsmax-main")
@@ -34,68 +35,6 @@ function remAdd(){
 
 
 
-//                                 shipping
-//                                    DOM
-var checks=document.querySelectorAll(".shipping>p>input")
-var gift=document.querySelector(".chekgift-shipping>input")
-var giftText=document.querySelectorAll(".gift-shipping>div")
-var Tenvio=document.querySelector(".shipping>h3")
-var dataEnvio=document.getElementById("dataEnvio-shipping")
-var btn_shipping=document.getElementById("button-shipping")
-
-//           Event lisener
-gift.addEventListener("click",isGift)
-checks[0].addEventListener("click",shipping)
-checks[1].addEventListener("click",shipping)
-checks[2].addEventListener("click",shipping)
-//            es un regalo
-function isGift(){
-    giftText[0].classList.toggle("visible")
-    giftText[1].classList.toggle("visible")
-}
-//              selecion envio
-function shipping(event){
-    var d= new Date();
-    switch(event.srcElement.classList[0]){
-        case"i1":
-        checks[1].checked=false
-        checks[2].checked=false
-        d.setUTCMilliseconds(86400000);
-        break
-        case"i2":
-        checks[0].checked=false
-        checks[2].checked=false
-        d.setUTCMilliseconds(172800000);
-        break
-        case"i3":
-        checks[1].checked=false
-        checks[0].checked=false
-        d.setUTCMilliseconds(259200000);
-        break
-    }
-    var md = d
-    dataEnvio.innerHTML = showTime(d) + " hasta el ";
-    md.setUTCMilliseconds(86400000)
-    dataEnvio.innerHTML = dataEnvio.innerHTML + showTime(md)
-    if (checks[0].checked == true || checks[1].checked == true || checks[2].checked == true) {
-        Tenvio.classList = "visible"
-        btn_shipping.disabled = false
-        btn_shipping.className = "btn-apple"
-    } else {
-        Tenvio.classList = ""
-        btn_shipping.disabled = true
-        btn_shipping.className = ""
-    }
-}
-
-function showTime(a) {
-    year = a.getFullYear();
-    month = a.getMonth();
-    Day = a.getDate();
-    hours = a.getHours();
-    minutes = a.getMinutes();
-    return (year + "-" + month + "-" + Day + " " + hours + ":" + minutes);
-}
 
 /* SetTimeOut and reload of page */
 
@@ -126,6 +65,7 @@ function changeToOrange() {
 }; */
 
 /* Change img src iPhone 13 to Orange */
+var shopcase=[]
 
 let btnOrange = document.querySelector('.orange-button');
 
@@ -140,6 +80,7 @@ function case1ChangeImgToOrange() {
     case1RedFirstSideImg.src = "src/assets/img/MM243_13.jpeg";
     case1RedSecondSideImg.src = "src/assets/img/MM243_AV5_13.jpeg";
     case1RedThirdSideImg.src = "src/assets/img/MM243_AV6_13.jpeg";
+    shopcase=["src/assets/img/MM243_13.jpeg","iPhone 13","Orange","","","55"]
 }
 
 /* Change img src iPhone 13 to Red */
@@ -157,6 +98,7 @@ function case1ChangeImgToRed() {
     case1OrangeFirstSideImg.src = "src/assets/img/MM2C3.jpeg";
     case1OrangeSecondSideImg.src = "src/assets/img/MM2C3_AV5.jpeg";
     case1OrangeThirdSideImg.src = "src/assets/img/MM2C3_AV6.jpeg";
+    shopcase=["src/assets/img/MM2C3.jpeg","iPhone 13","red","","","55"]
 }
 
 /* Change img to Main Display */
@@ -192,6 +134,8 @@ function test() {
     setTimeout(function () {
         window.location.reload();
     }, 50000);
+    shoping.push(shopcase)
+    console.log(shoping)
 }
 
 /* Legend dynamic */
@@ -224,6 +168,7 @@ function case2ChangeImgToOrange() {
     case1RedFirstSideImgCase2.src = "src/assets/img/MM2D3_AV1.jpeg";
     case1RedSecondSideImgCase2.src = "src/assets/img/MM2D3_AV4.jpeg";
     case1RedThirdSideImgCase2.src = "src/assets/img/MM2D3_AV5.jpeg";
+    shopcase=["src/assets/img/MM2D3_AV1.jpeg","iPhone 13 Pro Max","Orange","","","65"]
 }
 
 /* Change img src iPhone 13 to Red */
@@ -241,6 +186,7 @@ function case2ChangeImgToRed() {
     case1OrangeFirstSideImgCase2.src = "src/assets/img/MM2L3_AV1_Pro.jpeg";
     case1OrangeSecondSideImgCase2.src = "src/assets/img/MM2L3_AV4_Pro.jpeg";
     case1OrangeThirdSideImgCase2.src = "src/assets/img/MM2L3_AV5_Pro.jpeg";
+    shopcase=["src/assets/img/MM2L3_AV1_Pro.jpeg","iPhone 13 Pro Max","Red","","","65"]
 }
 
 /* Change img to Main Display */
@@ -281,6 +227,8 @@ function CheckPassword(inputtxt) {
 //                  dom
 var inputs=document.querySelectorAll(".address>p>input")
 var inp=document.querySelector(".address>div")
+var contry = document.getElementById("select-contry")
+var prefix = document.getElementById("select-prefix")
 var num_address = document.getElementById("num-address")
 var regular = document.getElementById("Regular-address")
 var btn_address = document.getElementById("next-address")
@@ -288,7 +236,9 @@ var btn_Next = document.getElementById("next-address-a")
 
 
 
+
 //            event lisener
+contry.addEventListener("click",prefix_contry)
 btn_address.addEventListener("click",next)
 regular.addEventListener("click",function(){inp.classList.toggle("visible")})
 for(var i =0;i<inputs.length;i++){
@@ -358,73 +308,160 @@ function allnumeric(inputtxt)
     }
 }
 
+function prefix_contry(){
+    let a=contry.selectedIndex;
+    prefix.selectedIndex=a;
+}
+//                              end address
+
+//                                 shipping
+//                                    DOM
+var checks=document.querySelectorAll(".shipping>p>input")
+var gift=document.querySelector(".chekgift-shipping>input")
+var giftText=document.querySelectorAll(".gift-shipping>div")
+var Tenvio=document.querySelector(".shipping>h3")
+var dataEnvio=document.getElementById("dataEnvio-shipping")
+var btn_shipping=document.getElementById("button-shipping")
+
+//           Event lisener
+gift.addEventListener("click",isGift)
+checks[0].addEventListener("click",shipping)
+checks[1].addEventListener("click",shipping)
+checks[2].addEventListener("click",shipping)
+btn_shipping.addEventListener("click",fin)
+//            es un regalo
+function isGift(){
+    giftText[0].classList.toggle("visible")
+    giftText[1].classList.toggle("visible")
+}
+//              selecion envio
+function shipping(event){
+    var d= new Date();
+    switch(event.srcElement.classList[0]){
+        case"i1":
+        checks[1].checked=false
+        checks[2].checked=false
+        d.setUTCMilliseconds(259200000);
+        for (const sh of shoping) {
+            sh[4]=d
+        }
+        break
+        case"i2":
+        checks[0].checked=false
+        checks[2].checked=false
+        d.setUTCMilliseconds(172800000);
+        for (const sh of shoping) {
+            sh[4]=d
+        }
+        break
+        case"i3":
+        checks[1].checked=false
+        checks[0].checked=false
+        d.setUTCMilliseconds(86400000);
+        for (const sh of shoping) {
+            sh[4]=d
+            
+        }
+        break
+    }
+    var md = d
+    dataEnvio.innerHTML = showTime(d) + " hasta el ";
+    md.setUTCMilliseconds(86400000)
+    dataEnvio.innerHTML = dataEnvio.innerHTML + showTime(md)
+    if (checks[0].checked == true || checks[1].checked == true || checks[2].checked == true) {
+        Tenvio.classList = "visible"
+        btn_shipping.disabled = false
+        btn_shipping.className = "btn-apple"
+    } else {
+        Tenvio.classList = ""
+        btn_shipping.disabled = true
+        btn_shipping.className = ""
+    }
+}
+
+function showTime(a) {
+    year = a.getFullYear();
+    month = a.getMonth();
+    Day = a.getDate();
+    hours = a.getHours();
+    minutes = a.getMinutes();
+    return (year + "-" + month + "-" + Day + " " + hours + ":" + minutes);
+}
+//          end shopping
 
 // carrito de la compra
 // array carcase
 
 
 //array de la compra
-var shoping =[["/src/assets/img/-blue.png","IPhone13","blue","512G","48h","1259"],
-["/src/assets/img/iphone13-pink-cover.png","IPhone13 cover","Pink","","48h","59"]];
+// shoping =[["/src/assets/img/-blue.png","IPhone13","blue","512G","48h","1259"],
+// ["/src/assets/img/iphone13-pink-cover.png","IPhone13 cover","Pink","","48h","59"]];
 //contenedor padre
 const dad = document.getElementById("content-finishing");
 //creacion de html de cada comanda
-for(var shop of shoping){
-    var compra = document.createElement("div");
-    compra.className="compra-finishing compra";
-    var image = document.createElement("img")
-    image.src= shop[0];
-    var title = document.createElement("h2");
-    title.innerHTML=shop[1]+" "+shop[2]+" "+shop[3];
-    var envio =document.createElement("p");
-    envio.innerHTML="Envio en :"+shop[4];
-    envio.id="envios"
-    var mony = document.createElement("h2");
-    mony.innerHTML=shop[5]+"€";
-    mony.className="mony"
-    var close = document.createElement("i")
-    close.className="fas fa-times-circle close-finishing"
-    dad.appendChild(compra);
-    compra.appendChild(image);
-    compra.appendChild(title);
-    compra.appendChild(envio);
-    compra.appendChild(mony);
-    compra.appendChild(close);
+function fin(){
+    for(var shop of shoping){
+        var compra = document.createElement("div");
+        compra.className="compra-finishing compra";
+        var image = document.createElement("img")
+        image.src= shop[0];
+        var title = document.createElement("h2");
+        title.innerHTML=shop[1]+" "+shop[2]+" "+shop[3];
+        var envio =document.createElement("p");
+        envio.innerHTML="Envio antes de:"+showTime(shop[4]);
+        envio.id="envios"
+        var mony = document.createElement("h2");
+        mony.innerHTML=shop[5]+"€";
+        mony.className="mony"
+        var close = document.createElement("i")
+        close.className="fas fa-times-circle close-finishing"
+        dad.appendChild(compra);
+        compra.appendChild(image);
+        compra.appendChild(title);
+        compra.appendChild(envio);
+        compra.appendChild(mony);
+        compra.appendChild(close);
+    }
+
+    //actualizacion precio
+    var envios = document.getElementById("envios")
+    var mony = document.getElementsByClassName("mony")
+    //contenendores donde poner el  precio
+    var subtotal = document.getElementById("subTotal-finishing")
+    var envio = document.getElementById("envio-finishing")
+    var total = document.getElementById("total-finishing")
+
+    //calcular precio productos
+    var subtot = 0
+    for (const mon of mony) {
+        var sub=parseFloat(mon.innerText.replace(/€/g,""))
+        subtot = sub + subtot
+    }
+    //calcular precio envios
+    var env
+    switch(envios.innerText){
+        case "Envio en :24h":
+            env =10
+            break
+        case "Envio en :48h":
+            env =5
+            break
+        default:
+            env =0
+    }
+
+    //poner precios en pantalla
+    subtotal.innerText=subtot+"€"
+    envio.innerText= env+"€"
+    total.innerText= subtot + env +"€"
+
+    let delet =document.querySelectorAll(".close-finishing");
+    console.log(delet)
+    for (const dele of delet) {
+        console.log(dele)
+        dele.addEventListener("click",del)
+    }
 }
-
-
-
-//actualizacion precio
-var envios = document.getElementById("envios")
-var mony = document.getElementsByClassName("mony")
-//contenendores donde poner el  precio
-var subtotal = document.getElementById("subTotal-finishing")
-var envio = document.getElementById("envio-finishing")
-var total = document.getElementById("total-finishing")
-
-//calcular precio productos
-var subtot = 0
-for (const mon of mony) {
-    var sub=parseFloat(mon.innerText.replace(/€/g,""))
-    subtot = sub + subtot
-}
-//calcular precio envios
-var env
-switch(envios.innerText){
-    case "Envio en :24h":
-        env =10
-        break
-    case "Envio en :48h":
-        env =5
-        break
-    default:
-        env =0
-}
-
-//poner precios en pantalla
-subtotal.innerText=subtot+"€"
-envio.innerText= env+"€"
-total.innerText= subtot + env +"€"
 
 //terminos y condiciones
 var check = document.getElementById("checkbox-finishing")
@@ -441,9 +478,9 @@ else if (check.checked==false){
 }}
 
 //quitar producto en la cesta
-var delet =document.getElementsByClassName("close-finishing");
-delet[0].addEventListener("click",del)
-delet[1].addEventListener("click",del)
+
+
+
 
 function del(event){
     dad.removeChild(event.path[1])
