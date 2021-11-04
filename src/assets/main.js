@@ -272,3 +272,90 @@ function CheckPassword(inputtxt) {
         return false;
     }
 }
+
+/* Profile validation check */
+
+var profileInputs = document.querySelectorAll(".profile-ul>input")
+console.log(profileInputs);
+var inp = document.querySelector(".address>div")
+var contry = document.getElementById("select-contry")
+var prefix = document.getElementById("select-prefix")
+var num_address = document.getElementById("num-address")
+var regular = document.getElementById("Regular-address")
+var btn_address = document.getElementById("next-address")
+var btn_Next = document.getElementById("next-address-a")
+
+
+
+
+//            event lisener
+contry.addEventListener("click", prefix_contry)
+btn_address.addEventListener("click", next)
+regular.addEventListener("click", function () {
+    inp.classList.toggle("visible")
+})
+for (var i = 0; i < profileInputs.length; i++) {
+    inputs[i].addEventListener("mouseup", comprovaciones)
+    inputs[i].addEventListener("keyup", comprovaciones)
+}
+//                    comprobacion validacion
+function comprovaciones(event) {
+    var cont_input = event.srcElement.value;
+    if (cont_input.length > 1) {
+        event.srcElement.style.color = "#008000";
+        event.srcElement.style.backgroundColor = "#ffffff";
+    } else {
+        event.srcElement.style.backgroundColor = "#ff0000";
+    }
+}
+
+function next() {
+    var a = 0
+    for (const input of inputs) {
+        if (input.classList[0] == "num-address") {
+            if (allnumeric(input)) {
+                console.log(allnumeric(input))
+                input.style.color = "#008000";
+                input.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                input.style.color = "#000000";
+                input.style.backgroundColor = "#ff0000";
+            }
+        } else {
+            if (input.value.length > 1) {
+                input.style.color = "#008000";
+                input.style.backgroundColor = "#ffffff";
+                a++
+                console.log(a)
+            } else {
+                input.style.backgroundColor = "#ff0000";
+            }
+        }
+
+        if (input.style.backgroundColor == "#ffffff") {
+            a++
+            console.log(a)
+        }
+    }
+    if (a == 6) {
+        btn_Next.href = "#shipping"
+    }
+
+}
+
+function allnumeric(inputtxt) {
+    var numbers = /^[0-9]+$/;
+    if (inputtxt.value.match(numbers)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function prefix_contry() {
+    let a = contry.selectedIndex;
+    prefix.selectedIndex = a;
+}
+//                              end address
