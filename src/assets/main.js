@@ -1,9 +1,11 @@
+//           main
+//            dom
 var Specsmax_main = document.getElementById("Specsmax-main")
 var promax_main = document.getElementById("promax-main")
 var IPhon13_main = document.getElementById("IPhon13-main")
 var Specs13_main = document.getElementById("Specs13-main")
 
-
+//           Event lisener
 promax_main.addEventListener("mouseover",visiblemax)
 promax_main.addEventListener("mouseout",visiblemax)
 IPhon13_main.addEventListener("mouseover",visible13)
@@ -27,12 +29,12 @@ function remAdd(){
     IPhon13_main.removeEventListener("mouseout",visible13)
     promax_main.removeEventListener("click",remAdd)
     IPhon13_main.removeEventListener("click",remAdd)
-    console.log("patata")
 }
 
 
 
 //                                 shipping
+//                                    DOM
 var checks=document.querySelectorAll(".shipping>p>input")
 var gift=document.querySelector(".chekgift-shipping>input")
 var giftText=document.querySelectorAll(".gift-shipping>div")
@@ -40,17 +42,17 @@ var Tenvio=document.querySelector(".shipping>h3")
 var dataEnvio=document.getElementById("dataEnvio-shipping")
 var btn_shipping=document.getElementById("button-shipping")
 
-
+//           Event lisener
 gift.addEventListener("click",isGift)
 checks[0].addEventListener("click",shipping)
 checks[1].addEventListener("click",shipping)
 checks[2].addEventListener("click",shipping)
-
+//            es un regalo
 function isGift(){
     giftText[0].classList.toggle("visible")
     giftText[1].classList.toggle("visible")
 }
-
+//              selecion envio
 function shipping(event){
     var d= new Date();
     switch(event.srcElement.classList[0]){
@@ -96,6 +98,7 @@ function showTime(a){
 }
 
 //                 address
+//                  dom
 var inputs=document.querySelectorAll(".address>p>input")
 var inp=document.querySelector(".address>div")
 var regular = document.getElementById("Regular-address")
@@ -103,14 +106,14 @@ var btn_address = document.getElementById("next-address")
 var btn_Next = document.getElementById("next-address-a")
 
 
-
+//            event lisener
 btn_address.addEventListener("click",next)
 regular.addEventListener("click",function(){inp.classList.toggle("visible")})
 for(var i =0;i<inputs.length;i++){
     inputs[i].addEventListener("mouseup",comprovaciones)
     inputs[i].addEventListener("keyup",comprovaciones) 
 }
-
+//                    comprobacion validacion
 function comprovaciones(event){
     var cont_input=event.srcElement.value;
     if(cont_input.length>1){
