@@ -1,6 +1,5 @@
-
 * {
-     /* overflow: hidden;  */
+  /* overflow: hidden;  */
 
   margin: 0;
   padding: 0;
@@ -27,7 +26,8 @@ html {
 body {
   font-size: 1.6rem; /*click the link for more info about px, rem, em  https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/ */
   color: var(--appleFontColor);
-  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
 }
 
 .navbar {
@@ -90,7 +90,7 @@ section {
   padding: 5px;
 }
 .visible {
-  visibility: visible!important;
+  visibility: visible !important;
 }
 
 .img-main {
@@ -146,71 +146,73 @@ section {
   transform: scale(5);
   box-shadow: 0px 0px 10px #158df0;
 }
-.advance{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    border-bottom: black 1px solid;
-    margin: 2% auto ;
-    width: 70%;
+.advance {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: black 1px solid;
+  margin: 2% auto;
+  width: 70%;
 }
-.advance>p{padding: 1%;}
-.progres-nav{
-    border-bottom: #158df0 3px solid;
+.advance > p {
+  padding: 1%;
+}
+.progres-nav {
+  border-bottom: #158df0 3px solid;
 }
 /* --------------shiping -----------------*/
-.shipping{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.shipping {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.shipping>h1{
-    padding: 2%;
-    padding-bottom: 3%;
+.shipping > h1 {
+  padding: 2%;
+  padding-bottom: 3%;
 }
-.shipping>p{
-    width: 30%;
-    padding: 0.5%;
+.shipping > p {
+  width: 30%;
+  padding: 0.5%;
 }
-.shipping>p>input{
-    margin: 0% 7%;
-    border-radius: 50px;
+.shipping > p > input {
+  margin: 0% 7%;
+  border-radius: 50px;
 }
-.shipping>i{
-    padding: 2%;
+.shipping > i {
+  padding: 2%;
 }
-.shipping>h3{
+.shipping > h3 {
   padding: 2%;
   visibility: hidden;
 }
-.chekgift-shipping{
-    padding: 2%;
+.chekgift-shipping {
+  padding: 2%;
 }
-.chekgift-shipping>input{
-    padding: 0% 1%;
+.chekgift-shipping > input {
+  padding: 0% 1%;
 }
-.gift-shipping{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.gift-shipping {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-.gift-shipping>div{
-    text-align: center;
-    margin: 1%;
-    padding: 1%;
-    border: black 1px solid;
-    border-radius: 5px;
-    visibility: hidden;
+.gift-shipping > div {
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  border: black 1px solid;
+  border-radius: 5px;
+  visibility: hidden;
 }
-.gift-shipping>div>p{
+.gift-shipping > div > p {
   padding: 30px;
 }
-.Text-shipping{
+.Text-shipping {
   width: 20em;
   height: 10em;
 }
-#button-shipping{
+#button-shipping {
   position: relative;
   bottom: 80px;
   left: 700px;
@@ -231,8 +233,7 @@ section {
 .cursor-pointer {
   cursor: pointer;
 }
-        /* --- aside left 1 --- */
-
+/* --- aside left 1 --- */
 
 .aside-iphone1 {
   display: grid;
@@ -245,8 +246,7 @@ section {
   width: auto;
 }
 
-        /* ---  center 1 --- */
-
+/* ---  center 1 --- */
 
 .display-center-iphone1 {
   display: grid;
@@ -255,7 +255,7 @@ section {
 }
 
 .display-main-iphone1 {
-  height:80rem;
+  height: 80rem;
 }
 
 .pick-color-iphone1 {
@@ -271,90 +271,88 @@ section {
 .item1-cont-iphone1 {
   grid-column-start: 1;
   grid-column-end: 2;
-
 }
 .item2-cont-iphone1 {
   grid-column-start: 3;
   grid-column-end: 4;
 }
 
-.circle-blue-iphone1, .circle-pink-iphone1{
+.circle-blue-iphone1,
+.circle-pink-iphone1 {
   height: auto;
-  width:auto;
+  width: auto;
 }
 
 /* --------------finishing --------------------*/
-.finishing{
+.finishing {
   width: 70%;
-    text-align: right;
-    margin: auto;
+  text-align: right;
+  margin: auto;
 }
-.title-finishing{
-    text-align: center;
+.title-finishing {
+  text-align: center;
 }
-.content-finishing{
+.content-finishing {
   overflow-y: scroll;
 }
-.compra-finishing{
-    height: 120px;
-    padding: 2%;
-    border: solid 1px gray;
-    border-radius: 10px;
-    margin: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.compra-finishing {
+  height: 120px;
+  padding: 2%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.compra-finishing>img{
-    width:10% ;
+.compra-finishing > img {
+  width: 10%;
 }
-.compra-finishing>div{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    align-content: flex-start;
+.compra-finishing > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
 }
-.compra-finishing>i{
-    font-size: 25px;
-    cursor: pointer;
+.compra-finishing > i {
+  font-size: 25px;
+  cursor: pointer;
 }
-.pay-finishing>p{
-  padding:6px;
+.pay-finishing > p {
+  padding: 6px;
 }
-.pay-finishing>p>strong{
-    position: relative;
-    right: 150px;
-    padding:10px;
+.pay-finishing > p > strong {
+  position: relative;
+  right: 150px;
+  padding: 10px;
 }
-.pay-finishing>p>span{
+.pay-finishing > p > span {
   position: absolute;
-  right:15%
+  right: 15%;
 }
-.pay-finishing>h3{
-  padding:10px;
+.pay-finishing > h3 {
+  padding: 10px;
 }
-.pay-finishing>h3>strong{
-    position: relative;
-    right: 150px;
+.pay-finishing > h3 > strong {
+  position: relative;
+  right: 150px;
 }
 
-.pay-finishing>h3>span{
-    position: absolute;
-    right:15%
+.pay-finishing > h3 > span {
+  position: absolute;
+  right: 15%;
 }
-.terminos-finishing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.terminos-finishing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.btn-pay{
-    width: 15%;
-    margin: 3% 45%;
+.btn-pay {
+  width: 15%;
+  margin: 3% 45%;
 }
 /* --------------finishing --------------------*/
-
-
 
 .opt-border-iphone1 {
   margin: 3rem;
@@ -382,7 +380,7 @@ section {
 
 .aside-description-iphone1 {
   font-size: 1.7rem;
- margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .horizontal-rule {
@@ -400,7 +398,7 @@ section {
   margin: 2rem 0;
 }
 
-.capacity-grid-iphone1{
+.capacity-grid-iphone1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -412,10 +410,10 @@ section {
 
 .gb-grid-item {
   border: 1px solid grey;
-padding: 1.5rem 0;
-border-radius: 10px;
-font-size: small;
-line-height: 1.5rem;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  font-size: small;
+  line-height: 1.5rem;
 }
 
 .capacity-gb-text {
@@ -445,7 +443,7 @@ line-height: 1.5rem;
 }
 
 .txt-blue {
-  color: var(--blueiPhone1)
+  color: var(--blueiPhone1);
 }
 
 .continue-btn-iphone1 {
@@ -455,7 +453,7 @@ line-height: 1.5rem;
 }
 
 .fa-heart {
-  color: var(--blueiPhone1)
+  color: var(--blueiPhone1);
 }
 
 /* ----------- end of  iPhone 13 ----------------*/
@@ -465,81 +463,75 @@ line-height: 1.5rem;
 /* --- aside left 2 --- */
 
 .circle-graffiti-iphone1 {
-height: 6.5rem;
-width: auto;
+  height: 6.5rem;
+  width: auto;
 }
 
 /* --- aside right 2 --- */
 
-
 /* ---------End Of iPhone 13 Pro (marcel) ----------*/
 /* --------------finishing --------------------*/
-.finishing{
-    width: 70%;
-    text-align: right;
-    margin: auto;
+.finishing {
+  width: 70%;
+  text-align: right;
+  margin: auto;
 }
-.title-finishing{
-    text-align: center;
+.title-finishing {
+  text-align: center;
 }
-.content-finishing{
+.content-finishing {
   overflow-y: scroll;
 }
-.compra-finishing{
-    height: 120px;
-    padding: 2%;
-    border: solid 1px gray;
-    border-radius: 10px;
-    margin: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.compra-finishing {
+  height: 120px;
+  padding: 2%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.compra-finishing>img{
-    width:10% ;
+.compra-finishing > img {
+  width: 10%;
 }
-.compra-finishing>div{
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    align-content: flex-start;
+.compra-finishing > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
 }
-.compra-finishing>i{
-    font-size: 25px;
-    cursor: pointer;
+.compra-finishing > i {
+  font-size: 25px;
+  cursor: pointer;
 }
-.pay-finishing>p>strong{
-    position: relative;
-    right: 150px;
+.pay-finishing > p > strong {
+  position: relative;
+  right: 150px;
 }
-.pay-finishing>h3>strong{
-    position: relative;
-    right: 150px;
+.pay-finishing > h3 > strong {
+  position: relative;
+  right: 150px;
 }
-.pay-finishing>p>span{
-    position: absolute;
-    right:15%
+.pay-finishing > p > span {
+  position: absolute;
+  right: 15%;
 }
-.pay-finishing>h3>span{
-    position: absolute;
-    right:15%
+.pay-finishing > h3 > span {
+  position: absolute;
+  right: 15%;
 }
-.terminos-finishing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.terminos-finishing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.btn-pay{
-    width: 15%;
-    margin: 3% 45%;
+.btn-pay {
+  width: 15%;
+  margin: 3% 45%;
 }
 /* --------------finishing --------------------*/
-
-
-
-
-
 
 footer {
   background-color: var(--navbar);

@@ -2,20 +2,20 @@
 
 // color buttons
 
-const iPinkCircle = document.getElementById('i13Pcircle');
+const iPinkCircle = document.getElementById( 'i13Pcircle' );
 const iBlueCircle = document.getElementById( 'i13Bcircle' );
 
 //  variables
 
-let i13Front = document.getElementById('iP13BF');
-let i13Side = document.getElementById('iP13BS');
-let i13Center = document.getElementById('i13Center');
+let i13Front = document.getElementById( 'iP13BF' );
+let i13Side = document.getElementById( 'iP13BS' );
+let i13Center = document.getElementById( 'i13Center' );
 
 // small images clicked display in center
 
-i13Side.addEventListener('click', () => {
+i13Side.addEventListener( 'click', () => {
     i13Center.src = i13Side.src;
-});
+} );
 
 i13Front.addEventListener( 'click', () => {
     i13Center.src = i13Front.src;
@@ -23,7 +23,7 @@ i13Front.addEventListener( 'click', () => {
 
 //  chose and change colors
 
-iPinkCircle.addEventListener( 'click', (e) => {
+iPinkCircle.addEventListener( 'click', ( e ) => {
 
     i13Front.src = "src/assets/img/iphone13-pink.png";
     i13Side.src = 'src/assets/img/iphone-13-pink-side.jpeg';
@@ -45,7 +45,7 @@ iBlueCircle.addEventListener( 'click', ( e ) => {
 
 // color buttons
 
-const proGraffitiCircle= document.getElementById( 'proGcircle' );
+const proGraffitiCircle = document.getElementById( 'proGcircle' );
 const proBlueCircle = document.getElementById( 'proBcircle' );
 
 //  variables
