@@ -744,7 +744,7 @@ i13Front.addEventListener('click', () => {
 iPinkCircle.addEventListener('click', (e) => {
 
     i13Front.src = "src/assets/img/iphone13-pink.png";
-    i13Side.src = 'src/assets/img/iphone-13-pink-side.jpeg';
+    i13Side.src = 'src/assets/img/iphone-13-pink-side.png';
     i13Center.src = "src/assets/img/iphone13-pink.png";
     shopcolor = ["src/assets/img/iphone13-pink.png", "iPhone 13", "pink"]
 });
@@ -840,7 +840,7 @@ proGraffitiCircle.addEventListener('click', (e) => {
 proBlueCircle.addEventListener('click', (e) => {
 
     pro13Front.src = "src/assets/img/iphone13-pro-blue.png";
-    pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.jpeg';
+    pro13Side.src = 'src/assets/img/iphone-13-pro-blue-side.png';
     pro13Center.src = "src/assets/img/iphone13-pro-blue.png";
 
     shopcolor = ["src/assets/img/iphone13-pro-blue.png", "iPhone 13 Pro Max", "blue"]
@@ -919,4 +919,3 @@ arriba.addEventListener("click",function(){
     window.location.reload();
     window.scrollTo(0, 0);})
 
- 
