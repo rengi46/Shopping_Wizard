@@ -451,10 +451,10 @@ input submit {
     padding: 1px 2px;
     border-width: 2px;
     border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-color: -internal-light-dark(rgb(3, 2, 2), rgb(133, 133, 133));
     border-image: initial;
 }
 
 .red-input-hidden {
-    visibility: hidden!important;
+    visibility: hidden !important;
 }
