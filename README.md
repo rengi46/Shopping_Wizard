@@ -165,7 +165,8 @@ Explain how you changed roles to develop the project for each phase (screen)
 
 ### Slides Presentation
 
-https://docs.google.com/presentation/d/1ZsrKVSBMETXyZRwO5owZtb2vxtgK7wmowArxwOFDDNI/edit?usp=sharing
+- [Google Slides link] (https://docs.google.com/presentation/d/e/2PACX-1vSnnd99yVPdAuJA69DbA7M0ajAqqe2Qvd-_WxRW9pqeWMEfyzIbIpU9KJOVfKGWfvYC8L_WNWDE5lMA/pub?start=true&loop=true&delayms=3000)
+
 
 ### Built With
 
