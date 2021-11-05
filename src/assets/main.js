@@ -905,3 +905,6 @@ function unirArr() {
     var shopIphone = shopcolor.concat(shopgiga)
     shoping.push(shopIphone)
 }
+
+var arriba = document.getElementById("again")
+arriba.addEventListener("click",function(){window.scrollTo(0, 0);})
