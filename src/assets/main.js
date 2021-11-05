@@ -44,21 +44,54 @@ function remAdd2() {
     IPhon13_main.removeEventListener("click", remAdd1)
 }
 
+/* MODAL */
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 /* SetTimeOut and reload of page + removeEventlisteners of Case1*/
 
-let btnContinue = document.getElementById("case1-continue");
+let btnContinue = document.querySelector("#case1-continue");
+console.log(btnContinue);
 
-btnContinue.addEventListener("click", test);
+btnContinue.addEventListener("click", test1);
 
-function test() {
+function test1() {
     setTimeout(function () {
         window.location.reload();
         window.scrollTo(0, 0);
-    }, 50000);
-
+    }, 300000);
+    shoping.push(shopcase)
+    var modalInterval = 4;
+    var modalTime = document.querySelector('#modalTime');
+    console.log(modalTime);
+    setInterval(() => {
+        modalTime.innerText = modalInterval;
+        modal.style.display = "block";
+        modalInterval--
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 5000);
+    }, 60000);
 }
 
 /* Legend dynamic */
@@ -140,16 +173,9 @@ function case1ChangeThirdToMain() {
 
 let btnContinueCase2 = document.getElementById("case2-continue");
 
-btnContinueCase2.addEventListener("click", test);
+btnContinueCase2.addEventListener("click", test1);
 
-function test() {
-    btnContinueCase2.href = '#profile'
-    setTimeout(function () {
-        window.location.reload();
-        window.scrollTo(0, 0);
-    }, 50000);
-    shoping.push(shopcase)
-}
+
 
 /* Legend dynamic */
 
@@ -258,56 +284,81 @@ function comprovaciones(event) {
 
 function profileNext() {
     var a = 0
-    for (let i=0;i<profileInputs.length;i++) {
-        console.log(i)
-        var hiddenInputs = document.querySelectorAll('.red-input-hidden');
+    for (let i = 0; i < profileInputs.length; i++) {
+        var hiddenInputs = document.querySelectorAll('.x');
         console.log(hiddenInputs);
         if (profileInputs[i].classList[1] == "profile-mail") {
             if (ValidateEmail(profileInputs[i])) {
                 console.log(ValidateEmail(profileInputs[i]))
                 profileInputs[i].style.color = "#008000";
                 profileInputs[i].style.backgroundColor = "#ffffff";
+                if (hiddenInputs[i].classList[3] == 'red-input-real') {
+                    hiddenInputs[i].classList.remove('red-input-real');
+                    hiddenInputs[i].classList.add('red-input-hidden');
+                }
                 a++
             } else {
                 profileInputs[i].style.color = "#000000";
                 profileInputs[i].style.backgroundColor = "#ff0000";
-                hiddenInputs[i].classList.remove('red-input-hidden');
-                hiddenInputs[i].classList.add('red-input-real');
+                if (hiddenInputs[i].classList[3] == 'red-input-hidden') {
+                    hiddenInputs[i].classList.remove('red-input-hidden');
+                    hiddenInputs[i].classList.add('red-input-real');
+                }
             }
-        } if (profileInputs[i].classList[1] == 'profile-password') {
+        }
+        if (profileInputs[i].classList[1] == 'profile-password') {
             if (CheckPassword(profileInputs[i])) {
-                console.log(CheckPassword(profileInputs[i]))
+                console.log(CheckPassword(profileInputs[i].value))
                 profileInputs[i].style.color = "#008000";
                 profileInputs[i].style.backgroundColor = "#ffffff";
+                if (hiddenInputs[i].classList[3] == 'red-input-real') {
+                    hiddenInputs[i].classList.remove('red-input-real');
+                    hiddenInputs[i].classList.add('red-input-hidden');
+                }
                 a++
             } else {
                 profileInputs[i].style.color = "#000000";
                 profileInputs[i].style.backgroundColor = "#ff0000";
-                hiddenInputs[i].classList.remove('red-input-hidden');
-                hiddenInputs[i].classList.add('red-input-real');
+                if (hiddenInputs[i].classList[3] == 'red-input-hidden') {
+                    hiddenInputs[i].classList.remove('red-input-hidden');
+                    hiddenInputs[i].classList.add('red-input-real');
+                }
             }
-        } if (profileInputs[i].classList[1] == 'profile-confirm') {
+        }
+        if (profileInputs[i].classList[1] == 'profile-confirm') {
             if (ConfirmPassword(profileInputs[i])) {
                 console.log(ConfirmPassword(profileInputs[i]))
                 profileInputs[i].style.color = "#008000";
                 profileInputs[i].style.backgroundColor = "#ffffff";
+                if (hiddenInputs[i].classList[3] == 'red-input-real') {
+                    hiddenInputs[i].classList.remove('red-input-real');
+                    hiddenInputs[i].classList.add('red-input-hidden');
+                }
                 a++
             } else {
                 profileInputs[i].style.color = "#000000";
                 profileInputs[i].style.backgroundColor = "#ff0000";
-                hiddenInputs[i].classList.remove('red-input-hidden');
-                hiddenInputs[i].classList.add('red-input-real');
+                if (hiddenInputs[i].classList[3] == 'red-input-hidden') {
+                    hiddenInputs[i].classList.remove('red-input-hidden');
+                    hiddenInputs[i].classList.add('red-input-real');
+                }
             }
         } else {
             if (profileInputs[i].value.length >= 5 && profileInputs[i].classList[1] !== 'profile-confirm' && profileInputs[i].classList[1] !==
                 'profile-password') {
                 profileInputs[i].style.color = "#008000";
                 profileInputs[i].style.backgroundColor = "#ffffff";
+                if (hiddenInputs[i].classList[3] == 'red-input-real') {
+                    hiddenInputs[i].classList.remove('red-input-real');
+                    hiddenInputs[i].classList.add('red-input-hidden');
+                }
                 a++
             } else {
                 profileInputs[i].style.backgroundColor = "#ff0000";
-                hiddenInputs[i].classList.remove('red-input-hidden');
-                hiddenInputs[i].classList.add('red-input-real');
+                if (hiddenInputs[i].classList[3] == 'red-input-hidden') {
+                    hiddenInputs[i].classList.remove('red-input-hidden');
+                    hiddenInputs[i].classList.add('red-input-real');
+                }
             }
         }
         if (profileInputs[i].style.backgroundColor == "#ffffff") {
@@ -332,10 +383,14 @@ function ValidateEmail(inputText) {
 
 
 function CheckPassword(inputtxt) {
+    inputtxt = inputtxt.toString();
+    console.log(inputtxt);
     var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if (inputtxt.value.match(passw)) {
+    if (inputtxt.match(passw)) {
+        console.log('a');
         return true;
     } else {
+        console.log('b');
         return false;
     }
 }

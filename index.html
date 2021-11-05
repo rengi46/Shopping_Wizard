@@ -30,6 +30,18 @@
         </ul>
     </nav>
 
+    <!-- Trigger/Open The Modal -->
+    <div id="myBtn">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Hurry up! <br> <br> You started registering <span id='modalTime'></span> minutes ago.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Section  iPhone-->
 
     <section class="main">
@@ -328,7 +340,7 @@
             </div>
 
             <div class="case1-end-buttons">
-                <a id="case1-continue" class="case1-continue btn-apple" href="#profile">Continue</a>
+                <a id="case1-continue" class="case1-continue btn-apple" href="#profile"> Continue </a>
             </div>
         </div>
 
@@ -379,7 +391,7 @@
                 </ul>
             </div>
             <div class="case2-end-buttons">
-                <a id="case2-continue" class="case2-continue btn-apple">Continue</a>
+                <a id="case2-continue" class="case2-continue btn-apple" href="#profile">Continue</a>
             </div>
         </div>
     </section>
@@ -402,13 +414,13 @@
                     <li><input minlength="5" maxlength="20" class="input-li profile-user-name" type="text"
                             name="profile-user-name"></li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li input-li red-input-hidden"> Please enter the User Name </li>
+                    <li class="x profile-li input-li red-input-hidden"> Please enter the User Name </li>
                     <li class="profile-li">&nbsp;</li>
                     <li> <b>E-mail address</b> </li>
                     <li class="profile-li">&nbsp;</li>
                     <li><input maxlength="50" class="input-li profile-mail" type="text" name="profileMail"></li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li input-li red-input-hidden"> Please enter the E-mail address </li>
+                    <li class="x profile-li input-li red-input-hidden"> Please enter the E-mail address </li>
                     <li class="profile-li">&nbsp;</li>
                     <li class="rq-profile-li"> <b>Password</b> <br><br>[8 to 15 characters which contain at least one
                         lowercase
@@ -419,7 +431,7 @@
                             class="input-li profile-password" type='password' id='textpassword' />
                     </li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li input-li red-input-hidden"> Please enter the Password
+                    <li class="x profile-li input-li red-input-hidden"> Please enter the Password
                     </li>
                     <li class="profile-li">&nbsp;</li>
                     <li> <b>Confirm Password</b> </li>
@@ -428,7 +440,7 @@
                             class="input-li profile-confirm" />
                     </li>
                     <li class="profile-li">&nbsp;</li>
-                    <li class="profile-li input-li red-input-hidden"> Please enter the Password
+                    <li class="x profile-li input-li red-input-hidden"> Please enter the Password
                     </li>
                     <li class="profile-li">&nbsp;</li>
                     <li class="profile-li">&nbsp;</li>
@@ -474,6 +486,15 @@
                 <p>This is not my delivery address </p>
                 <input id="Regular-address" type="checkbox">
             </form>
+            <ul>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li">&nbsp;</li>
+                <li class="profile-li">&nbsp;</li>
+            </ul>
+
             <a id="next-address-a"><button id="next-address" class="button-form btn-apple">Next</button></a>
 
         </div>
