@@ -74,8 +74,10 @@ let btnContinue = document.querySelector("#case1-continue");
 console.log(btnContinue);
 
 btnContinue.addEventListener("click", test1);
-
+var minEmpezar
 function test1() {
+    var today = new Date();
+    minEmpezar=today.getMinutes()
     setTimeout(function () {
         window.location.reload();
         window.scrollTo(0, 0);
@@ -653,9 +655,15 @@ function fin() {
 //terminos y condiciones
 var check = document.getElementById("checkbox-finishing")
 var btn_pay = document.getElementById("btn-finishing")
+var DivFinal = document.getElementById("FinalTime")
 check.addEventListener("click", abtn)
-
+var minFin
 function abtn() {
+    var today = new Date();
+    minFin=today.getMinutes()
+    console.log(minFin)
+    var resultMin=minFin-minEmpezar
+    DivFinal.innerText=resultMin;
     if (check.checked == true) {
         btn_pay.disabled = false
         btn_pay.classList.toggle("btn-apple")
@@ -907,4 +915,8 @@ function unirArr() {
 }
 
 var arriba = document.getElementById("again")
-arriba.addEventListener("click",function(){window.scrollTo(0, 0);})
+arriba.addEventListener("click",function(){
+    window.location.reload();
+    window.scrollTo(0, 0);})
+
+ 
